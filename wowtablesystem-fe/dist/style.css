@@ -1,0 +1,65 @@
+body{
+    background-color: black;
+    width: 1650px;
+}
+
+.container{
+    width: 1640px;
+    height: 450px;
+    background: #FFF;
+}
+
+.one{
+   background: #FF502F; 
+   width: 300px;
+   height: 30px;
+}
+
+.two{
+  background: #FF502F;
+  float: left;
+  margin-top: 50px;
+  width: 30px;
+  height: 370px;
+}
+
+.three{
+  background: #FF502F;
+  float: right;
+   width: 300px;
+   height: 30px;
+}
+
+p{
+    color: #fff;
+}
+
+.block{
+    float: right;
+    width: 1560px;
+    height: 390px;
+}
+
+.logo{
+    background-image: url(logo.jpg);
+    margin-top: 20px;
+    float: left;
+    width: 350px;
+    height: 350px;
+    border-radius: 350px;
+    position: fixed;
+}
+
+.name{
+    float: right;
+    background: #004D61;
+    margin-top: 100px;
+    width: 1250px;
+    height: 200px;
+}
+
+.text{
+    color: #FF502F;
+    font-size: 60px;
+    margin: 70px 50px;
+}
