@@ -12,6 +12,7 @@ body{
     background-color: #004D61;
     width: 1650px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* header */
@@ -75,7 +76,7 @@ body{
 .text{
     color: #FF502F;
     font: 80px BebasBold;
-    margin: 65px 250px 60px;
+    margin: 55px 180px 60px;
     letter-spacing: 20px;
 }
 
@@ -88,9 +89,124 @@ body{
     font: 80px Bebas;
     letter-spacing: 10px;
     font-size: 60px;
-    margin-left: 250px;
-    margin-top: 60px;
+    margin-left: 180px;
+    margin-top: 70px;
 }
 
 /* Main */
 
+article{
+    font: 40px Bebas;
+    letter-spacing: 5px;
+}
+
+.warn{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-left: 300px;
+}
+
+span{
+    font-size: 50px;
+}
+
+#nik{
+    margin-left: 35px;
+    margin-top: 30px;
+    height: 60px;
+    width: 700px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#warning{
+    width: 1000px;
+    margin: auto;
+    height: 50px;
+    background-color: #004D61;
+    color: #ffffff;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.blocks{
+    margin: 0 auto;
+    margin-bottom: 100px;
+    width: 1000px;
+    background-color: #ffffff;
+    color: #004D61;
+    border-radius: 15px;
+}
+
+.textInBox{
+    padding: 20px 0px 0px 30px;
+    margin: 0;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#block1{
+    height: 200px;
+}
+
+#block2{
+    height: 820px;
+}
+
+#block3{
+    height: 350px;
+}
+
+#block4{
+    height: 200px;
+}
+
+.dots{
+    margin-left: 35px;
+    transform: scale(2);
+}
+
+label{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-left: 0px;
+}
+
+#warrior{
+    margin-top: 50px;
+}
+
+#damager{
+    margin-top: 50px;
+}
+
+#sub{
+    width: 1000px;
+    height: 80px;
+    color: #004D61;
+    background-color: #FF502F;
+    border-radius: 15px;
+    border: none;
+    margin: 0 auto;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 6px;
+}
+
+.ForDots{
+    flex-direction: column;
+    margin-bottom: 33px;
+}
+
+.warn{
+    margin: 0px;
+    font-size: 50px;
+}
+
+#warrior{
+    background-image: url(logo.jpg);
+}
