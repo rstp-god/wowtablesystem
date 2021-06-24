@@ -9,20 +9,26 @@
 }
 
 body{
-    background-color: black;
+    background-color: #004D61;
     width: 1650px;
+    margin: 0 auto;
 }
+
+/* header */
 
 .container{
     width: 1640px;
     height: 450px;
     background: #FFF;
+    border-radius: 15px;
+    margin-top: 100px;
 }
 
 .one{
    background: #FF502F; 
    width: 300px;
    height: 30px;
+   border-radius: 15px 0px 0px 0px;
 }
 
 .two{
@@ -31,6 +37,7 @@ body{
   margin-top: 50px;
   width: 30px;
   height: 370px;
+  border-radius: 0px 0px 0px 15px;
 }
 
 .three{
@@ -38,6 +45,7 @@ body{
   float: right;
    width: 300px;
    height: 30px;
+   border-radius: 0px 0px 15px 0px;
 }
 
 .block{
@@ -53,7 +61,7 @@ body{
     width: 350px;
     height: 350px;
     border-radius: 350px;
-    position: fixed;
+    position: absolute;
 }
 
 .name{
@@ -67,6 +75,22 @@ body{
 .text{
     color: #FF502F;
     font: 80px BebasBold;
-    margin: 65px 120px;
+    margin: 65px 250px 60px;
     letter-spacing: 20px;
 }
+
+.clock{
+    height: 100px;
+}
+
+.time{
+    color: #FF502F;
+    font: 80px Bebas;
+    letter-spacing: 10px;
+    font-size: 60px;
+    margin-left: 250px;
+    margin-top: 60px;
+}
+
+/* Main */
+
