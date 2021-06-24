@@ -1,3 +1,13 @@
+@font-face {
+    font-family: "Bebas";
+    src: url(font/bebasneueregular.ttf);
+}
+
+@font-face {
+    font-family: "BebasBold";
+    src: url(font/bebasneuebold.ttf);
+}
+
 body{
     background-color: black;
     width: 1650px;
@@ -30,10 +40,6 @@ body{
    height: 30px;
 }
 
-p{
-    color: #fff;
-}
-
 .block{
     float: right;
     width: 1560px;
@@ -60,6 +66,7 @@ p{
 
 .text{
     color: #FF502F;
-    font-size: 60px;
-    margin: 70px 50px;
+    font: 80px BebasBold;
+    margin: 65px 120px;
+    letter-spacing: 20px;
 }
