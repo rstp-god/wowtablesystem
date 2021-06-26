@@ -11,7 +11,7 @@ let inform = {
     moreInformation: undefined
 }
 
-const json
+let json
 
 function addData (){
     
