@@ -42,3 +42,4 @@ function addData (){
     json = JSON.stringify(inform)
 }
 sub.addEventListener('click', addData)
+
