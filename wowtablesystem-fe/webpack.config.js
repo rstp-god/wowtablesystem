@@ -1,17 +1,41 @@
 'use strict';
 
 let path = require('path');
+const HTMLWebpackPlugin = require('html-webpack-plugin'); 
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
+  context: __dirname + '/src',
   mode: 'development',
-  entry: './src/index.js',
+  entry: {
+    interviewModule : './interviewModule/interviewModule.js',
+    createRaidModule : './createRaidModule/createRaidModule.js'
+  },
   output: {
-    filename: 'main.js',
+    filename: '[name].[hash].js',
     path: __dirname + '/dist/script'
   },
-  watch: true,
-
   devtool: "source-map",
-
-  module: {}
+  devServer: {
+    contentBase: __dirname + '/dist',
+    compress: false,
+    port: 5050,
+    open: true,
+    writeToDisk: true,
+    openPage: 'script/interviewModule.html',
+  },
+  plugins: [
+    new HTMLWebpackPlugin({ 
+      template: './interviewModule/interviewModule.html', 
+      filename: `interviewModule.html`,
+      chunks: ['interviewModule'],
+    }), 
+    
+    new HTMLWebpackPlugin({ 
+      template: './createRaidModule/createRaidModule.html', 
+      filename: `createRaidModule.html`,
+      chunks: ['createRaidModule'],
+    }), 
+    new CleanWebpackPlugin()
+  ]
 };
