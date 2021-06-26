@@ -1,23 +1,22 @@
 let dots = document.getElementsByName('class'),
-    sub = document.getElementById('sub'),
-    nik = document.getElementById('nik'),
-    pol = document.getElementsByName('pol'),
-    info = document.getElementById('info'),
-    json
+    submitButton = document.getElementById('sub'),
+    nickName = document.getElementById('nik'),
+    role = document.getElementsByName('pol'),
+    moreInformation = document.getElementById('info')
 
 let inform = {
-    nik: null,
-    class: null,
-    rol: null,
-    dop: null
+    nickName: undefined,
+    class: undefined,
+    role: undefined,
+    moreInformation: undefined
 }
 
+const json
 
-
-sub.addEventListener('click', () =>{
+function addData (){
     
-    inform.nik = nik.value
-    if(!inform.nik)
+    inform.nickName = nickName.value
+    if(!inform.nickName)
         alert("Введи ник")
     
     for (let i = 0; i < dots.length; i++) {
@@ -26,19 +25,20 @@ sub.addEventListener('click', () =>{
         break
     }
     }
-    for (let i = 0; i < pol.length; i++) {
-    if (pol[i].checked) {
-        inform.rol = pol[i].value
+    for (let i = 0; i < role.length; i++) {
+    if (role[i].checked) {
+        inform.role = role[i].value
         break
     }
     }
-    if(inform.class == null){
+    if(!inform.class){
         alert("Выбери класс")
     }
-    if(inform.rol == null){
+    if(!inform.role){
         alert("Выбери роль")
     }
-    inform.dop = info.value
+    inform.moreInformation = moreInformation.value
 
-     json = JSON.stringify(inform)
-})
+    json = JSON.stringify(inform)
+}
+sub.addEventListener('click', addData)
