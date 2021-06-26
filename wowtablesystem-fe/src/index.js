@@ -1,7 +1,7 @@
 let dots = document.getElementsByName('class'),
-    submitButton = document.getElementById('sub'),
-    nickName = document.getElementById('nik'),
-    role = document.getElementsByName('pol'),
+    submitButton = document.getElementById('submitButton'),
+    nickName = document.getElementById('NicknameBox'),
+    role = document.getElementsByName('RaidRole'),
     moreInformation = document.getElementById('info')
 
 let inform = {
@@ -39,7 +39,10 @@ function addData (){
     }
     inform.moreInformation = moreInformation.value
 
-    json = JSON.stringify(inform)
+    json = JSON.stringify(inform);
+    console.log(json);
 }
-sub.addEventListener('click', addData)
+submitButton.addEventListener('click', addData)
+
+
 
