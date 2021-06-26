@@ -9,7 +9,8 @@ module.exports = {
   mode: 'development',
   entry: {
     interviewModule : './interviewModule/interviewModule.js',
-    createRaidModule : './createRaidModule/createRaidModule.js'
+    createRaidModule : './createRaidModule/createRaidModule.js',
+    reviewTableModule : './reviewTableModule/reviewTableModule.js'
   },
   output: {
     filename: '[name].[hash].js',
@@ -35,6 +36,11 @@ module.exports = {
       template: './createRaidModule/createRaidModule.html', 
       filename: `createRaidModule.html`,
       chunks: ['createRaidModule'],
+    }), 
+    new HTMLWebpackPlugin({ 
+      template: './reviewTableModule/reviewTableModule.html', 
+      filename: `reviewTableModule.html`,
+      chunks: ['reviewTableModule'],
     }), 
     new CleanWebpackPlugin()
   ]
