@@ -26,39 +26,39 @@
         <div id="warning">
             <p class="warn">*обязательно для заполнения</p>
         </div>
-        <div class='blocks' id="block1">
-             <p class='textInBox'><span>1.</span> Никнейм*</p>
-             <input id="nik" type="text" name="namePerson" maxlength="20" placeholder="Введите ник">
-        </div>
-        <div class='blocks' id="block2">
-            <p class='textInBox'><span>2.</span> Класс*</p>
-            <form action="main.js">
-                <div class='ForDots'></form><label for="warrior"><input class='dots' id="warrior" type="checkbox" value="apple"> Воин</label></div>
-                <div class='ForDots'><label for="druid"><input class='dots' id="druid" type="checkbox" value="druid"> Друид</label></div>
-                <div class='ForDots'><label for="priest"><input class='dots' id="priest" type="checkbox" value="priest"> Жрец</label></div>
-                <div class='ForDots'><label for="mage"><input class='dots' id="mage" type="checkbox" value="mage"> Маг</label></div>
-                <div class='ForDots'><label for="hunter"><input class='dots' id="hunter" type="checkbox" value="hunter"> Охотник</label></div>
-                <div class='ForDots'><label for="paladin"><input class='dots' id="paladin" type="checkbox" value="paladin"> Паладин</label></div>
-                <div class='ForDots'><label for="rogue"><input class='dots' id="rogue" type="checkbox" value="rogue"> Разбойник</label></div>
-                <div class='ForDots'><label for="warlock"><input class='dots' id="warlock" type="checkbox" value="warlock"> Чернокнижник</label></div>
-                <div class='ForDots'><label for="shaman"><input class='dots' id="shaman" type="checkbox" value="shaman"> Шаман</label></div>
-            </form>
-        </div>
-        <div class='blocks' id="block3">
-            <p class='textInBox'><span>3.</span> Роль в рейде*</p>
-            <form action="main.js">
-                <div class='ForDots'><label for="damager"><input class='dots' id="damager" type="checkbox" value="damager"> Дамагер</label> </div>
-                <div class='ForDots'><label for="tank"><input class='dots' id="tank" type="checkbox" value="tank"> Танк</label></div>
-                <div class='ForDots'><label for ="healer"><input class='dots' id="healer" type="checkbox" value="healer"> Хилер</label></div>
-            </form>
-        </div>
-        <div class='blocks' id="block4">
-            <p class='textInBox'><span>4.</span> Дополнительная информация</p>
-            <input id="nik" type="text" name="namePerson" maxlength="100" placeholder="Введите здесь">
-        </div>
-        <div class="blocks">
-           <input id="sub" type="submit" name="submit" value="Отправить">
-        </div>
+        <form method="POST" action='pack.json'>
+            <div class='blocks' id="block1">
+                <p class='textInBox'><span>1.</span> Никнейм*</p>
+                <input id="nik" type="text" name="namePerson" maxlength="20" placeholder="Введите ник">
+            </div>
+            <div class='blocks' id="block2">
+                <p class='textInBox'><span>2.</span> Класс*</p>
+                    <div class='ForDots'><label for="warrior"><input class='dots' id="warrior" type="radio" name = "class" value="apple"> Воин</label></div>
+                    <div class='ForDots'><label for="druid"><input class='dots' id="druid" type="radio" name = "class" value="druid"> Друид</label></div>
+                    <div class='ForDots'><label for="priest"><input class='dots' id="priest" type="radio" name = "class" value="priest"> Жрец</label></div>
+                    <div class='ForDots'><label for="mage"><input class='dots' id="mage" type="radio" name = "class" value="mage"> Маг</label></div>
+                    <div class='ForDots'><label for="hunter"><input class='dots' id="hunter" type="radio" name = "class" value="hunter"> Охотник</label></div>
+                    <div class='ForDots'><label for="paladin"><input class='dots' id="paladin" type="radio" name = "class" value="paladin"> Паладин</label></div>
+                    <div class='ForDots'><label for="rogue"><input class='dots' id="rogue" type="radio" name = "class" value="rogue"> Разбойник</label></div>
+                    <div class='ForDots'><label for="warlock"><input class='dots' id="warlock" type="radio" name = "class" value="warlock"> Чернокнижник</label></div>
+                    <div class='ForDots'><label for="shaman"><input class='dots' id="shaman" type="radio" name = "class" value="shaman"> Шаман</label></div>
+            </div>
+            <div class='blocks' id="block3">
+                <p class='textInBox'><span>3.</span> Роль в рейде*</p>
+                    <div class='ForDots'><label for="damager"><input class='dots' id="damager" type="radio" name = "pol" value="damager"> Дамагер</label> </div>
+                    <div class='ForDots'><label for="tank"><input class='dots' id="tank" type="radio" name = "pol" value="tank"> Танк</label></div>
+                        <div class='ForDots'><label for ="healer"><input class='dots' id="healer" type="radio" name = "pol" value="healer"> Хилер</label></div>
+                </div>
+            <div class='blocks' id="block4">
+                <p class='textInBox'><span>4.</span> Дополнительная информация</p>
+                <input id="info" type="text" name="namePerson" maxlength="100" placeholder="Введите здесь">
+            </div>
+            <div class="blocks">
+                <input id="sub" type="button" name="submit" value="Отправить">
+                <!-- <button id="sub">Отправить</button> -->
+            </div>
+        </form>
     </article>
+    <script src="../src/index.js"></script>
 </body>
 </html>
