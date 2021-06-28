@@ -26,7 +26,6 @@ export class CarajanController {
         newInst.creatorNickName = CreateNewInstace.creatorNickName; 
         newInst.dueDate = CreateNewInstace.dueDate; 
         newInst.encryptedUrlToTable = CreateNewInstace.encryptedUrlToTable;
-        console.log(newInst);
         this.Service.create(newInst); 
         return new HttpException('New instance just Created!', HttpStatus.OK)
     }
