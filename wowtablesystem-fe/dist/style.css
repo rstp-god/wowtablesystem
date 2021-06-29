@@ -122,8 +122,22 @@ body{
     text-transform: uppercase;
 }
 
-#NicknameBox,#info:focus{
+#info:focus{
     outline: none;
+    color:#FF502F;
+}
+
+#NicknameBox:focus{
+    outline: none;
+    color:#FF502F;
+}
+
+.dots:focus{
+    color:#FF502F;
+}
+
+.Choises:focus{
+    color: #FF502F;
 }
 
 #warning{
@@ -152,6 +166,10 @@ body{
     margin: 0;
     font-size: 40px;
     text-transform: uppercase;
+}
+
+.stars{
+    color:#FF502F;
 }
 
 #NicknameBlock{
@@ -185,20 +203,6 @@ body{
     margin-top: 50px;
 }
 
-#submitButton{
-    width: 1000px;
-    height: 80px;
-    color: #004D61;
-    background-color: #FF502F;
-    border-radius: 15px;
-    border: none;
-    margin: 0 auto;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: #ffffff;
-    letter-spacing: 6px;
-}
-
 .ForDots{
     flex-direction: row;
     margin-bottom: 33px;
@@ -223,6 +227,46 @@ body{
 
 .WowIcons{
     opacity: 0.60;
+}
+
+#submitButton{
+    width: 1000px;
+    height: 80px;
+    color: #004D61;
+    background-color: #FF502F;
+    border-radius: 15px;
+    border: none;
+    margin: 0 auto;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 6px;
+    position: relative;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#submitButton:after {
+    content: "";
+    background: #ffffff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+#submitButton:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
 }
 
 label > input{ /* HIDE RADIO */
