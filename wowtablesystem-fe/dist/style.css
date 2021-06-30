@@ -118,6 +118,7 @@ body{
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom-color: #004D61;
     font-size: 40px;
     text-transform: uppercase;
 }
@@ -125,19 +126,13 @@ body{
 #info:focus{
     outline: none;
     color:#FF502F;
+    border-bottom-color: #FF502F;
 }
 
 #NicknameBox:focus{
     outline: none;
     color:#FF502F;
-}
-
-.dots:focus{
-    color:#FF502F;
-}
-
-.Choises:focus{
-    color: #FF502F;
+    border-bottom-color: #FF502F;
 }
 
 #warning{
@@ -242,8 +237,8 @@ body{
     color: #ffffff;
     letter-spacing: 6px;
     position: relative;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
     text-decoration: none;
     overflow: hidden;
     cursor: pointer;
@@ -259,7 +254,7 @@ body{
     margin-left: -20px!important;
     margin-top: -120%;
     opacity: 0;
-    transition: all 0.8s
+    transition: all 3s
 }
 
 #submitButton:active:after {
