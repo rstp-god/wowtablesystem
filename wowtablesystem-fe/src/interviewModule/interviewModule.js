@@ -32,7 +32,7 @@ icons.forEach((icon)=> {
     }); 
 }); 
 
-submitButton.addEventListener('click', addData)
+//submitButton.addEventListener('click', addData)
 
 function addData (){
     

@@ -135,6 +135,7 @@ body{
     border-bottom-color: #FF502F;
 }
 
+
 #warning{
     width: 1000px;
     margin: auto;
@@ -228,7 +229,6 @@ body{
 #submitButton{
     width: 1000px;
     height: 80px;
-    color: #004D61;
     background-color: #FF502F;
     border-radius: 15px;
     border: none;
@@ -246,23 +246,29 @@ body{
 }
 
 #submitButton:after {
-    content: "";
-    background: #ffffff;
-    display: block;
     position: absolute;
-    padding-top: 300%;
-    padding-left: 350%;
-    margin-left: -20px!important;
-    margin-top: -120%;
-    opacity: 0;
-    transition: all 3s
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: all 1s;
 }
 
-#submitButton:active:after {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    transition: 0s
+.textButton {
+    margin: 0;  
+    position: relative;
+    z-index: 2;  
+}
+
+
+#submitButton:hover {
+    color: #FF502F;
+}
+
+#submitButton:hover:after { 
+    width: 100%;
 }
 
 ._active { 
