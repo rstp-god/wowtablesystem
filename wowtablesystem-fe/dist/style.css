@@ -197,6 +197,7 @@ body{
     font-size: 40px;
     text-transform: uppercase;
     margin-left: 20px;
+    color: #004D61; 
 }
 
 #damager{
@@ -269,6 +270,10 @@ body{
     transition: 0s
 }
 
+._active { 
+    color: #FF502F; 
+}
+
 label > input{ /* HIDE RADIO */
     visibility: hidden; /* Makes input not-clickable */
     position: absolute; /* Remove input from document flow */
@@ -279,5 +284,5 @@ label > input + img,.Choises{ /* IMAGE STYLES */
 }
 
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-    opacity: 1;
+    opacity: 1; 
 }
