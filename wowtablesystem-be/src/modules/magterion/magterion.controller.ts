@@ -1,26 +1,26 @@
-import { Controller, Get, Post, Param, Body, HttpException, HttpStatus, Query, Delete } from '@nestjs/common';
-import { CarajanService } from './carajan.service';
-import { Carajan } from 'src/entities/Carajan.entity';
+import { Controller, Get, Param, Query, Post, HttpException, Body, HttpStatus, Delete } from '@nestjs/common';
+import { MagterionService } from './magterion.service';
+import { Magterion } from 'src/entities/Magterion.entity';
 import CreateNewInstace from 'src/dto/NewInstance.dto';
 
-@Controller('carajan')
-export class CarajanController {
+@Controller('magterion')
+export class MagterionController {
 
-    constructor( private readonly Service: CarajanService) {}
+    constructor( private readonly Service: MagterionService) {}
 
     @Get()
-    getAll(): Promise<Carajan[]>{
+    getAll(): Promise<Magterion[]>{
         return this.Service.findAll(); 
     }
 
     @Get(':nickname')
-    getAllByNickName(@Param() params): Promise<Carajan[]> {
+    getAllByNickName(@Param() params): Promise<Magterion[]> {
         return this.Service.findByNickname(params); 
     }
 
     @Post() 
     addNewInst(@Body() CreateNewInstace: CreateNewInstace) :HttpException {
-        const newInst = new Carajan(); 
+        const newInst = new Magterion(); 
         const date = new Date(); 
         newInst.creationDate = date.toLocaleString().slice(0,10); 
         newInst.creatorNickName = CreateNewInstace.creatorNickName; 
