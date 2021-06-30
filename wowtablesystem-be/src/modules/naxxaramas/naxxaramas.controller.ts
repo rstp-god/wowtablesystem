@@ -1,27 +1,26 @@
 import { Controller, Get, Post, Delete, Body, Param, HttpException, HttpStatus } from '@nestjs/common';
-import { GruullairService } from './gruullair.service';
-import { Gruullair } from 'src/entities/Gruullair.entity';
+import { NaxxaramasService } from './naxxaramas.service';
+import { Naxxramas } from 'src/entities/Naxxramas.entity';
 import CreateNewInstace from 'src/dto/NewInstance.dto';
 
+@Controller('naxxaramas')
+export class NaxxaramasController {
 
-@Controller('gruullair')
-export class GruullairController {
-
-    constructor(private readonly Service: GruullairService) {}
+    constructor(private readonly Service: NaxxaramasService) {}
 
     @Get()
-    getAll(): Promise<Gruullair[]> {
+    getAll(): Promise<Naxxramas[]> {
         return this.Service.findAll(); 
     }
 
     @Get(':nickname')
-    getAllByNickName(@Param() params): Promise<Gruullair[]> {
+    getAllByNickName(@Param() params): Promise<Naxxramas[]> {
         return this.Service.findByNickName(params);
     }
 
     @Post()
     addNewInst(@Body() CreateNewInstace: CreateNewInstace): HttpException {
-        const newInst = new Gruullair(); 
+        const newInst = new Naxxramas(); 
         const date = new Date(); 
         newInst.creationDate = date.toLocaleString().slice(0,10); 
         newInst.creatorNickName  =  CreateNewInstace.creatorNickName; 
