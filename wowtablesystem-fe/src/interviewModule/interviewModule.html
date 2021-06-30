@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../interview.css">
     <title>Document</title>
 </head>
 <body>
@@ -27,17 +27,17 @@
             <p class="WarningText">*обязательно для заполнения</p>
         </div>
             <div class='blocks' id="NicknameBlock">
-                <p class='textInBox'><span class="NumberInBox">1.</span> Никнейм*</p>
+                <p class='textInBox'><span class="NumberInBox">1.</span> Никнейм<span class="stars">*</span></p>
                 <input id="NicknameBox" type="text" name="namePerson" maxlength="20" placeholder="Введите ник">
             </div>
             <div class='blocks' id="ClassBlock">
-                <p class='textInBox'><span class="NumberInBox">2.</span> Класс*</p>
+                <p class='textInBox'><span class="NumberInBox">2.</span> Класс<span class="stars">*</span></p>
                     <div class='ForDots' id="WarriorDot">
                         <label>
                             <input class='dots' id="warrior" type="radio" name = "class" value="warrior">
                             <img class="WowIcons" src="../img/icons/warrior.png">
                         </label>
-                        <label class="Choises" for="warrior"> Воин</label>
+                        <label class="Choises" for="warrior"><span class="textChoises"> Воин</span></label>
                     </div>
                     <div class='ForDots'>
                         <label>
@@ -97,7 +97,7 @@
                     </div>
             </div>
             <div class='blocks' id="RaidRoleBlock">
-                <p class='textInBox'><span class="NumberInBox">3.</span> Роль в рейде*</p>
+                <p class='textInBox'><span class="NumberInBox">3.</span> Роль в рейде<span class="stars">*</span></p>
                     <div class='ForDots' id="DamagerDot">
                         <label>
                             <input class='dots' id="damager" type="radio" name = "RaidRole" value="damager">
@@ -117,7 +117,7 @@
                                 <input class='dots' id="healer" type="radio" name = "RaidRole" value="healer">
                                 <img class="WowIcons" src="../img/icons/healer.png">
                             </label>
-                            <label class="Choises" for ="healer"> Хилер</label>
+                                <label class="Choises" for="healer"> Хилер</label>
                         </div>
                 </div>
             <div class='blocks' id="InfoBlock">
@@ -125,7 +125,7 @@
                 <input id="info" type="text" name="namePerson" maxlength="100" placeholder="Введите здесь">
             </div>
             <div class="blocks">
-                <button id="submitButton">Отправить</button>
+                <button id="submitButton"><p class="textButton">Отправить</p></button>
             </div>
     </article>
 </body>

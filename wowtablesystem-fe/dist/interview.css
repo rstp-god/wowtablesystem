@@ -118,13 +118,23 @@ body{
     border-top: none;
     border-left: none;
     border-right: none;
+    border-bottom-color: #004D61;
     font-size: 40px;
     text-transform: uppercase;
 }
 
-#NicknameBox,#info:focus{
+#info:focus{
     outline: none;
+    color:#FF502F;
+    border-bottom-color: #FF502F;
 }
+
+#NicknameBox:focus{
+    outline: none;
+    color:#FF502F;
+    border-bottom-color: #FF502F;
+}
+
 
 #warning{
     width: 1000px;
@@ -154,6 +164,10 @@ body{
     text-transform: uppercase;
 }
 
+.stars{
+    color:#FF502F;
+}
+
 #NicknameBlock{
     height: 200px;
 }
@@ -179,24 +193,11 @@ body{
     font-size: 40px;
     text-transform: uppercase;
     margin-left: 20px;
+    color: #004D61; 
 }
 
 #damager{
     margin-top: 50px;
-}
-
-#submitButton{
-    width: 1000px;
-    height: 80px;
-    color: #004D61;
-    background-color: #FF502F;
-    border-radius: 15px;
-    border: none;
-    margin: 0 auto;
-    font-size: 40px;
-    text-transform: uppercase;
-    color: #ffffff;
-    letter-spacing: 6px;
 }
 
 .ForDots{
@@ -225,6 +226,55 @@ body{
     opacity: 0.60;
 }
 
+#submitButton{
+    width: 1000px;
+    height: 80px;
+    background-color: #FF502F;
+    border-radius: 15px;
+    border: none;
+    margin: 0 auto;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 6px;
+    position: relative;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#submitButton:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: all 1s;
+}
+
+.textButton {
+    margin: 0;  
+    position: relative;
+    z-index: 2;  
+}
+
+
+#submitButton:hover {
+    color: #FF502F;
+}
+
+#submitButton:hover:after { 
+    width: 100%;
+}
+
+._active { 
+    color: #FF502F; 
+}
+
 label > input{ /* HIDE RADIO */
     visibility: hidden; /* Makes input not-clickable */
     position: absolute; /* Remove input from document flow */
@@ -235,5 +285,5 @@ label > input + img,.Choises{ /* IMAGE STYLES */
 }
 
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
-    opacity: 1;
+    opacity: 1; 
 }
