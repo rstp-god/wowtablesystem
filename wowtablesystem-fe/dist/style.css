@@ -232,8 +232,12 @@ label > input{ /* HIDE RADIO */
 
 label > input + img,.Choises{ /* IMAGE STYLES */
     cursor:pointer;
+     opacity: 0;
 }
 
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     opacity: 1;
+}
+label > input:checked + .Choises{ /* (RADIO CHECKED) IMAGE STYLES */
+   
 }
