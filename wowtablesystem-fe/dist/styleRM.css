@@ -1,0 +1,121 @@
+@font-face {
+    font-family: "Bebas";
+    src: url(font/bebasneueregular.ttf);
+}
+
+@font-face {
+    font-family: "BebasBold";
+    src: url(font/bebasneuebold.ttf);
+}
+
+body{
+    background-color: #004D61;
+    font-family: Bebas;
+}
+
+/* header */
+
+.container-head{
+    margin: 0 auto;
+    width: 1920px;
+    height: 448px;
+}
+
+.logo{
+    margin: 48px 760px;
+    width: 400px;
+    height: 400px;
+    background-image:url(img/logo.jpg);
+    border-radius: 400px;
+    float: left;
+}
+
+.but{
+    width: 500px;
+    height: 80px;
+    margin-top: 216px;
+    background-color: #FF502F;
+    border-radius: 15px;
+    font-size: 45px;
+    color:white;
+    display: none;
+
+}
+
+.cabinet{
+    float: left;
+    margin-left: 161px;
+}
+
+.regstr{
+    float: right;
+    margin-right: 161px;
+}
+
+/* MAIN */
+
+.container{
+    width: 1100px;
+    height: 632px;
+    margin: 32px auto;
+    font-family: Bebas;
+    font-size: 45px;
+}
+
+.RDraid{
+    width: 1100px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.text{
+    color: #004D61;
+    width: 250px;
+    height: 50px;
+    margin-left: 42px;
+}
+
+.nameRaid{
+    /* margin-top: 40px; */
+}
+
+.inputNameRaid{
+    width: 780px;
+    height: 48px;
+    float: right;
+}
+
+.dateRaid{
+    margin-top: 24px;
+}
+
+.addReid{
+    width: 1100px;
+    height: 80px;
+    margin: 46px 0 42px 0;
+    background: #FF502F;
+    border: 0;
+    border-radius: 15px;
+    font-family: Bebas;
+    font-size: 45px;
+    color:white;
+}
+
+.link{
+    width: 1100px;
+    height: 80px;
+    background: white;
+    border-radius: 15px;
+}
+
+.writenRaid, .listPersanRaid{
+    color: #004D61;
+    text-decoration: underline;
+    margin: 0 auto;
+    letter-spacing: 6px;
+}
+
+.writenRaid{
+    margin-right: 48px;
+}
