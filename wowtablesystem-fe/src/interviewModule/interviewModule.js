@@ -38,7 +38,7 @@ function addData (){
     
     inform.nickName = nickName.value;
     if(!inform.nickName)
-        alert("Введи ник");
+        console.log("Введи ник");
     
     for (let i = 0; i < dots.length; i++) {
     if (dots[i].checked) {
@@ -53,10 +53,10 @@ function addData (){
     }
     }
     if(!inform.class){
-        alert("Выбери класс");
+        console.log("Выбери класс");
     }
     if(!inform.role){
-        alert("Выбери роль");
+        console.log("Выбери роль");
     }
     inform.moreInformation = moreInformation.value;
 
