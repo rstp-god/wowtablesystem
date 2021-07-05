@@ -25,12 +25,12 @@ body{
     margin: 48px 760px;
     width: 400px;
     height: 400px;
-    background-image:url(img/logo.jpg);
+    background-image:url(img/logoRM.jpg);
     border-radius: 400px;
     float: left;
 }
 
-.but{
+.button_top{
     width: 500px;
     height: 80px;
     margin-top: 216px;
@@ -47,7 +47,7 @@ body{
     margin-left: 161px;
 }
 
-.regstr{
+.registration{
     float: right;
     margin-right: 161px;
 }
@@ -62,7 +62,7 @@ body{
     font-size: 45px;
 }
 
-.RDraid{
+.raidData{
     width: 1100px;
     height: 200px;
     background-color: #fff;
@@ -82,6 +82,12 @@ body{
 
 .inputNameRaid{
     width: 780px;
+    height: 48px;
+    float: right;
+}
+
+.inputDateRaid{
+    width: 80px;
     height: 48px;
     float: right;
 }

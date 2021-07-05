@@ -146,7 +146,7 @@ body{
     margin-bottom: 100px;
 }
 
-.blocks{
+.blocks, #error{
     margin: 0 auto;
     margin-bottom: 100px;
     width: 1000px;
@@ -155,6 +155,15 @@ body{
     border-radius: 15px;
     display: flex;
     flex-direction: column;
+}
+
+#error{
+    background: #fff;
+    display: none;
+}
+
+#errNick, #errClass, #errRol{
+    margin: 10px 35px;
 }
 
 .textInBox{
