@@ -23,7 +23,7 @@ module.exports = {
     port: 5050,
     open: true,
     writeToDisk: true,
-    openPage: 'script/interviewModule.html',
+    openPage: 'script/createRaidModule.html',
   },
   plugins: [
     new HTMLWebpackPlugin({ 

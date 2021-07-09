@@ -11,32 +11,33 @@
 body{
     background-color: #004D61;
     font-family: Bebas;
+    margin: 0;
 }
 
 /* header */
 
 .container-head{
     margin: 0 auto;
-    width: 1920px;
-    height: 448px;
+    width: calc(1200px + (1920 - 1200) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(280px + (448 - 280) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .logo{
-    margin: 48px 760px;
-    width: 400px;
-    height: 400px;
-    background-image:url(img/logoRM.jpg);
-    border-radius: 400px;
+    margin: calc(28px + (48 - 28) * ((100vw - 1200px) / (1920 - 1200))) calc(475px + (760 - 475) * ((100vw - 1200px) / (1920 - 1200))) 0;
+    width: calc(250px + (400 - 250) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(250px + (400 - 250) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(250px + (400 - 250) * ((100vw - 1200px) / (1920 - 1200)));
     float: left;
+    transform: scale(1);
 }
 
-.button_top{
-    width: 500px;
-    height: 80px;
-    margin-top: 216px;
+/* .button_top{
+    width: 26.04%;
+    height: 4.1%;
+    margin-top: 11.25%;
     background-color: #FF502F;
-    border-radius: 15px;
-    font-size: 45px;
+    border-radius: 0.78%;
+    font-size: 2.34%;
     color:white;
     display: none;
 
@@ -44,84 +45,140 @@ body{
 
 .cabinet{
     float: left;
-    margin-left: 161px;
+    margin-left: 8.385%;
 }
 
 .registration{
     float: right;
-    margin-right: 161px;
-}
+    margin-right: 8.385%;
+} */
 
 /* MAIN */
 
 .container{
-    width: 1100px;
-    height: 632px;
-    margin: 32px auto;
-    font-family: Bebas;
-    font-size: 45px;
+    width: calc(700px + (1100 - 700) * ((100vw - 1200px) / (1920 - 1200)));
+    height: 600px;
+    margin: 32px auto 0;
 }
 
-.raidData{
-    width: 1100px;
-    height: 200px;
+.raidNameData{
+    width: 100%;
+    height: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #fff;
     border-radius: 15px;
+    display: flex;
 }
 
 .text{
+    width: calc(175px + (280 - 175) * ((100vw - 1200px) / (1920 - 1200)));
     color: #004D61;
-    width: 250px;
-    height: 50px;
-    margin-left: 42px;
+    height: calc(31px + (50 - 31) * ((100vw - 1200px) / (1920 - 1200)));
+    font-size: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(21px + (33 - 21) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(26px + (42 - 26) * ((100vw - 1200px) / (1920 - 1200)));
+    letter-spacing: calc(3px + (5 - 3) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.flex-column{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
 }
 
 .nameRaid{
-    /* margin-top: 40px; */
-}
-
-.inputNameRaid{
-    width: 780px;
-    height: 48px;
-    float: right;
-}
-
-.inputDateRaid{
-    width: 80px;
-    height: 48px;
+    box-sizing: border-box;
+    background-color: rgba(255, 80, 47, 0.3);
+    margin-left: calc(23px + (37 - 23) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(16px + (28 - 16) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(440px + (700 - 440) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: 50px;
+    padding-left: calc(10px + (17 - 10) * ((100vw - 1200px) / (1920 - 1200)));
+    padding-top: calc(4px + (6 - 4) * ((100vw - 1200px) / (1920 - 1200)));
     float: right;
 }
 
 .dateRaid{
-    margin-top: 24px;
+    box-sizing: border-box;
+    background-color: rgba(132, 132, 132, 0.3);
+    margin-left: calc(23px + (37 - 23) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(18px + (30 - 18) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(275px + (440 - 275) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: 50px;
+    padding-left: calc(10px + (17 - 10) * ((100vw - 1200px) / (1920 - 1200)));
+    padding-top: calc(4px + (6 - 4) * ((100vw - 1200px) / (1920 - 1200)));
+    float: right;
+}
+
+.inputNameRaid{
+    color: rgba(255, 80, 47);
+    background-color: rgba(255, 80, 47, 0);
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    font-family: Bebas;
+    font-size: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+    letter-spacing: calc(3px + (5 - 3) * ((100vw - 1200px) / (1920 - 1200)));
+    
+}
+
+.inputDateRaid{
+    color: rgba(132, 132, 132, 0.88);
+    background-color: rgba(255, 80, 47, 0);
+    width: calc(inherit - 20px);
+    height: inherit;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    font-family: Bebas;
+    font-size: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+    letter-spacing: calc(3px + (5 - 3) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.Vector{
+    width: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    float: right;
+    margin-right: 25px;
+    display:flex;
+    flex-direction: column;
 }
 
 .addReid{
-    width: 1100px;
-    height: 80px;
-    margin: 46px 0 42px 0;
+    width: 100%;
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
+    margin: 3% 0 3% 0;
     background: #FF502F;
     border: 0;
     border-radius: 15px;
     font-family: Bebas;
-    font-size: 45px;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     color:white;
 }
 
 .link{
-    width: 1100px;
-    height: 80px;
+    width: 100%;
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
     background: white;
     border-radius: 15px;
+    display: flex;
+    flex-direction: row;
 }
 
 .writenRaid, .listPersanRaid{
     color: #004D61;
     text-decoration: underline;
-    margin: 0 auto;
-    letter-spacing: 6px;
+    margin: calc(10px + (17 - 10) * ((100vw - 1200px) / (1920 - 1200))) auto;
+    letter-spacing: calc(3px + (5 - 3) * ((100vw - 1200px) / (1920 - 1200)));
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .writenRaid{
-    margin-right: 48px;
+    margin-right: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
 }

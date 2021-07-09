@@ -9,27 +9,41 @@
 </head>
 <body>
     <div class="container-head">
-        <button class="button_top cabinet">ЛИЧНЫЙ КАБИНЕТ</button>
-        <div  class="logo">
-        <button class=" button_top registration">РЕГИСТРАЦИЯ</button>
+        <!-- <button class="button_top cabinet">ЛИЧНЫЙ КАБИНЕТ</button> -->
+        <img src="../img/logoRM.jpg" class="logo"></img>
+        <!-- <button class=" button_top registration">РЕГИСТРАЦИЯ</button> -->
     </div>
     <div class="container">
         
-            <table class="raidData">
-                <tr>
-                   <td><div class="text nameRaid">ВЫБОР РЕЙДА</div></td><td><input class="inputNameRaid" type="text" name="raid" id="sun"></td>
-                </tr>
-                <tr>
-                    <td><div class="text dateRaid">ВЫБОР ДАТЫ</div></td><td><input class="inputDateRaid"  type="text" name="data" id="day"></td><td><input class="inputDateRaid"  type="text" name="data" id="month"></td><td><input class="inputDateRaid"  type="text" name="data" id="year"></td>
-                </td>
-            </table>
+            <div class="raidNameData">
+                <div class="flex-column">
+                    <div class="flex-row">
+                        <div class="text">ВЫБОР РЕЙДА</div>
+                        <div class="nameRaid">
+                            <input class="inputNameRaid" type="text" name="raid" id="raid" value="ВЫБЕРИ ЗДЕСЬ">
+                            <div class="Vector">
+                                <img style="transform: scale(1);" src="../img/RaidModule/Vector2.png">
+                                <img style="transform: scale(1);" src="../img/RaidModule/Vector2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex-row">
+                        <div class="text">ВЫБОР ДАТЫ</div>
+                        <div class="dateRaid">
+                            <input  class="inputDateRaid" type="date" name="date" id="day" value="2021-07-09">
+                            <div class="Vector" style="display: none;">
+                                <img style="transform: scale(1);" src="../img/RaidModule/Vector.png">
+                                <img style="transform: scale(1);" src="../img/RaidModule/Vector.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         <button class="addReid">СОЗДАТЬ РЕЙД</button>
-        <table class="link_BD">
-            <td style="width: 48px;"></td>
-            <td class="writenRaid">ЗАПИСЬ В РЕЙД</td>
-            <td style="width: 150px;"></td>
-            <td class="listPersanRaid">ТАБЛИЦА ЗАПИСАВШИХСЯ</td>
-        </table>
+        <div class="link">
+            <div class="writenRaid">ЗАПИСЬ В РЕЙД</div>
+            <div class="listPersanRaid">ТАБЛИЦА ЗАПИСАВШИХСЯ</div>
+        </div>
     </div>
 </body>
 </html>
