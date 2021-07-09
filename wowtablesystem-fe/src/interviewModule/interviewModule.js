@@ -3,7 +3,11 @@ let dots = document.getElementsByName('class'),
     nickName = document.getElementById('NicknameBox'),
     role = document.getElementsByName('RaidRole'),
     moreInformation = document.getElementById('info'), 
-    icons = document.querySelectorAll('.dots');
+    icons = document.querySelectorAll('.dots'),
+    error = document.getElementById('error'),
+    errNick = document.getElementById('errNick'),
+    errClass = document.getElementById('errClass'),
+    errRol = document.getElementById('errRol')
    
 let inform = {
     nickName: undefined,
@@ -35,10 +39,18 @@ icons.forEach((icon)=> {
 submitButton.addEventListener('click', addData)
 
 function addData (){
+
+    error.style.display = 'none'
+    errNick.style.display = 'none'
+    errClass.style.display = 'none'
+    errRol.style.display = 'none'
     
     inform.nickName = nickName.value;
-    if(!inform.nickName)
-        alert("Введи ник");
+    if(!inform.nickName){
+        error.style.display = 'block'
+        errNick.style.display = 'block'
+    }
+        
     
     for (let i = 0; i < dots.length; i++) {
     if (dots[i].checked) {
@@ -53,10 +65,12 @@ function addData (){
     }
     }
     if(!inform.class){
-        alert("Выбери класс");
+        error.style.display = 'block'
+        errClass.style.display = 'block'
     }
     if(!inform.role){
-        alert("Выбери роль");
+        error.style.display = 'block'
+        errRol.style.display = 'block'
     }
     inform.moreInformation = moreInformation.value;
 
