@@ -88,9 +88,13 @@ body{
 .flex-row{
     display: flex;
     flex-direction: row;
+    align-items: center;
 }
 
 .nameRaid{
+    display: flex; 
+    justify-content: flex-start;
+    align-content: center; 
     box-sizing: border-box;
     background-color: rgba(255, 80, 47, 0.3);
     margin-left: calc(23px + (37 - 23) * ((100vw - 1200px) / (1920 - 1200)));
@@ -112,20 +116,21 @@ body{
     height: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
     border-radius: 50px;
     padding-left: calc(10px + (17 - 10) * ((100vw - 1200px) / (1920 - 1200)));
-    padding-top: calc(4px + (6 - 4) * ((100vw - 1200px) / (1920 - 1200)));
     float: right;
 }
 
 .inputNameRaid{
     color: rgba(255, 80, 47);
     background-color: rgba(255, 80, 47, 0);
-    margin: 0 auto;
     padding: 0;
     border: none;
     font-family: Bebas;
     font-size: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
     letter-spacing: calc(3px + (5 - 3) * ((100vw - 1200px) / (1920 - 1200)));
-    
+}
+
+.inputNameRaid:focus {
+   outline: none;
 }
 
 .inputDateRaid{
@@ -141,9 +146,14 @@ body{
     letter-spacing: calc(3px + (5 - 3) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
+.inputDateRaid:focus {
+    outline: none;
+ }
+
 .Vector{
     width: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     height: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    margin: 0 auto;
     float: right;
     margin-right: 25px;
     display:flex;
@@ -181,4 +191,9 @@ body{
 
 .writenRaid{
     margin-right: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.url { 
+    color: inherit; 
+    text-decoration: none
 }
