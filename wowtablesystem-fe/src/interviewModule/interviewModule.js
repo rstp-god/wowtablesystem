@@ -1,3 +1,7 @@
+import StringInTables from '../services/StringInTables';
+
+const api = new StringInTables(); 
+
 let dots = document.getElementsByName('class'),
     submitButton = document.getElementById('submitButton'),
     nickName = document.getElementById('NicknameBox'),
@@ -9,7 +13,7 @@ let inform = {
     nickName: undefined,
     class: undefined,
     role: undefined,
-    moreInformation: undefined
+    moreInfo: undefined
     },
     PrevRaidRole = undefined,
     PrevClassName = undefined,
@@ -58,8 +62,16 @@ function addData (){
     if(!inform.role){
         alert("Выбери роль");
     }
-    inform.moreInformation = moreInformation.value;
+    inform.moreInfo = moreInformation.value;
 
     json = JSON.stringify(inform);
+    
+    api.createNewString(0,json).then((response) => { 
+        if(response.message === 'New instance just Created!') {
+            console.log('DONE');
+            // TODO : REPLACE FOR END LOADING
+        }
+    }); 
 }
+
 
