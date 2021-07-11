@@ -91,20 +91,47 @@ body{
     align-items: center;
 }
 
+.activeText { 
+    color:rgba(255, 80, 47, 0.5)!important; 
+}
+
+.activeBlock { 
+    background-color: rgba(255, 80, 47, 0.5)!important;
+}
+
 .nameRaid{
     display: flex; 
     justify-content: flex-start;
     align-content: center; 
     box-sizing: border-box;
-    background-color: rgba(255, 80, 47, 0.3);
+    background-color: rgb(218 218 218);
     margin-left: calc(23px + (37 - 23) * ((100vw - 1200px) / (1920 - 1200)));
     margin-top: calc(16px + (28 - 16) * ((100vw - 1200px) / (1920 - 1200)));
     width: calc(440px + (700 - 440) * ((100vw - 1200px) / (1920 - 1200)));
     height: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
     border-radius: 50px;
     padding-left: calc(10px + (17 - 10) * ((100vw - 1200px) / (1920 - 1200)));
-    padding-top: calc(4px + (6 - 4) * ((100vw - 1200px) / (1920 - 1200)));
+    /* padding-top: calc(4px + (6 - 4) * ((100vw - 1200px) / (1920 - 1200))); */
     float: right;
+    cursor: pointer;
+}
+
+#nameRaid2{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    justify-content: flex-start;
+    align-content: center; 
+    box-sizing: border-box;
+    background-color: rgb(218 218 218);
+    color: rgba(132, 132, 132, 0.88);
+    margin-top: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(420px + (666 - 420) * ((100vw - 1200px) / (1920 - 1200)));
+    /* height: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200))); */
+    border-radius: 0 0 15px 15px;
+    float: right;
+    z-index: 100;
+    padding-left: 10px;
 }
 
 .dateRaid{
@@ -120,13 +147,21 @@ body{
 }
 
 .inputNameRaid{
-    color: rgba(255, 80, 47);
+    color: rgba(132, 132, 132);
     background-color: rgba(255, 80, 47, 0);
+    width: calc(440px + (700 - 440) * ((100vw - 1200px) / (1920 - 1200)));
     padding: 0;
     border: none;
     font-family: Bebas;
     font-size: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
     letter-spacing: calc(3px + (5 - 3) * ((100vw - 1200px) / (1920 - 1200)));
+    cursor: pointer;
+}
+
+#carajan, #naxxaramas, #magterion, #gruullair{
+    color: rgba(132, 132, 132, 0.88);
+    cursor: pointer;
+    
 }
 
 .inputNameRaid:focus {
@@ -136,7 +171,7 @@ body{
 .inputDateRaid{
     color: rgba(132, 132, 132, 0.88);
     background-color: rgba(255, 80, 47, 0);
-    width: calc(inherit - 20px);
+    width: calc(255px + (420 - 255) * ((100vw - 1200px) / (1920 - 1200)));
     height: inherit;
     margin: 0 auto;
     padding: 0;
@@ -155,12 +190,27 @@ body{
     height: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     margin: 0 auto;
     float: right;
-    margin-right: 25px;
+    margin-right: calc(15px + (25 - 15) * ((100vw - 1200px) / (1920 - 1200)));
     display:flex;
     flex-direction: column;
 }
 
-.addReid{
+.Vector:hover{
+    background-color: rgba(255, 80, 47, 0.5);
+}
+
+#error{
+    background: #fff;
+    display: none;
+    border-radius: 15px;
+}
+
+#errRaid, #errData{
+    margin: 10px 35px 0;
+    color: #004D61;
+}
+
+.addRaid{
     width: 100%;
     height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
     margin: 3% 0 3% 0;
@@ -170,6 +220,10 @@ body{
     font-family: Bebas;
     font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     color:white;
+}
+
+.addRaid:focus{
+   outline: none;
 }
 
 .link{
