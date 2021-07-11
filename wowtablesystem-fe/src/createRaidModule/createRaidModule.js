@@ -1,3 +1,6 @@
+import {v4 as uuid} from "uuid";
+import RaidService from "../services/RaidService";
+
 const nameRaid = document.getElementById("raid"),
     dateRaid = document.getElementById("day"),
     Vector1 = document.getElementsByClassName("Vector")[0],
@@ -9,14 +12,21 @@ const nameRaid = document.getElementById("raid"),
     error = document.getElementById('error'),
     errRaid = document.getElementById('errRaid'), 
     inputNameRaid = document.getElementsByClassName('inputNameRaid'),
-    divNameRaid = document.getElementsByClassName('nameRaid');
+    divNameRaid = document.getElementsByClassName('nameRaid'),
+    urltoInterview = document.querySelectorAll('.url')[0],
+    urltoTable =document.querySelectorAll('.url')[1],
+    date = new Date(),
+    raidApi = new RaidService;
+
+dateRaid.value=formattedDate(date);
 
 let valueRaidCheck = false,
+    raid, 
     raidInform = {
-        raid: undefined,
-        data: undefined
+        dueDate: undefined, 
+        encryptedUrlToTable: undefined
     },
-    json
+    json;
 
 raidName.addEventListener("click", () => {
     if (!valueRaidCheck) {
@@ -62,10 +72,50 @@ submitButton.addEventListener("click", () => {
         error.style.display = 'block' ;
         errRaid.style.display = 'block' ;
     }else{
-        raidInform.raid = valueR[0].value ;
+         switch(valueR[0].value) {
+             case 'Каражан': { 
+                raid = 0;  
+                break; 
+             }
+             case 'Логово Магтеридона': { 
+                raid = 1;  
+                break; 
+             }
+             case 'Наксрамас': { 
+                raid = 2;  
+                break; 
+             }
+             case 'Логово Груула': { 
+                raid = 3;  
+                break; 
+             }
+         }
 
-        raidInform.data = dateRaid.value ;
-
+        raidInform.dueDate = dateRaid.value ;
+        raidInform.encryptedUrlToTable = uuid(); 
         json = JSON.stringify(raidInform) ;
+        raidApi.createNewRaid(raid,json).then((res)=> { 
+            // TODO loading end
+            if(res.message === 'New instance just Created!') {
+                let newUrl =''; 
+                newUrl = `${urltoInterview.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/interviewModule.html?uuid=${raidInform.encryptedUrlToTable}`; 
+                urltoInterview.href = newUrl;
+                console.log(urltoInterview);
+                newUrl = `${urltoTable.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/reviewTableModule.html?uuid=${raidInform.encryptedUrlToTable}`; 
+                urltoTable.href = newUrl; 
+                console.log(urltoTable); 
+            }
+        });
     }
 })
+
+function formattedDate(d) {
+    let month = String(d.getMonth() + 1);
+    let day = String(d.getDate());
+    const year = String(d.getFullYear());
+  
+    if (month.length < 2) month = '0' + month;
+    if (day.length < 2) day = '0' + day;
+  
+    return `${year}-${month}-${day}`;
+  }
