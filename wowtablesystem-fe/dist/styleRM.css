@@ -63,7 +63,7 @@ body{
 
 .raidNameData{
     width: 100%;
-    height: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(250px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #fff;
     border-radius: 15px;
     display: flex;
@@ -250,4 +250,27 @@ body{
 .url { 
     color: inherit; 
     text-decoration: none
+}
+
+#nicknameBox{
+    margin-left: 35px;
+    margin-top: 30px;
+    height: 60px;
+    width: 700px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #004D61;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#nicknameBox:focus{
+    outline: none;
+    color:#FF502F;
+    border-bottom-color: #FF502F;
+}
+
+.nicknameRaid{
+    margin-left: calc(10px + (37 - 23) * ((100vw - 1200px) / (1920 - 1200)));
 }
