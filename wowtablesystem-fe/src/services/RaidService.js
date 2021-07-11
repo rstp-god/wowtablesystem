@@ -3,7 +3,7 @@ export default class RaidService {
     _apiURL ='http://sundancex.ru/api'; 
 
 
-    async createNewRaid(raid,json) {
+    createNewRaid = async (raid,json) => {
         const response = await fetch(`${this._apiURL}/${this.TableEnum[raid]}`,{ 
             method: 'POST', 
             mode: 'cors', 
@@ -15,7 +15,7 @@ export default class RaidService {
         return response.json(); 
     }
 
-    async getRaidsByNickname(raid,nickname) {
+    getRaidsByNickname = async (raid,nickname) => {
         const response = await fetch(`${this._apiURL}/${this.TableEnum[raid]}/${nickname}`,{ 
             method: 'GET', 
             mode: 'cors', 
@@ -26,7 +26,7 @@ export default class RaidService {
         return await response.json(); 
     }
 
-    async deleteRaid(raid,id) { 
+    deleteRaid = async (raid,id) => { 
         const response = await fetch(`${this._apiURL}/${this.TableEnum[raid]}/${id}`,{ 
             method: 'DELETE', 
             mode: 'cors', 
