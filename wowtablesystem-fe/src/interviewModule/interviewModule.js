@@ -1,3 +1,7 @@
+import StringInTables from '../services/StringInTables';
+
+const api = new StringInTables(); 
+
 let dots = document.getElementsByName('class'),
     submitButton = document.getElementById('submitButton'),
     nickName = document.getElementById('NicknameBox'),
@@ -22,17 +26,6 @@ let inform = {
 const loading = document.getElementsByClassName("loading")[0],
     container = document.getElementsByClassName("container")[0],
     containerMain = document.getElementsByClassName("MainContainer")[0]
-
-let xhr = new XMLHttpRequest(); 
-xhr.open("GET", "interviewModule.html", false)
-xhr.send();
-console.log(xhr.status)
-
-if(xhr.status == 200){
-    loading.style.display = "none"
-    container.style.display = "block"
-    containerMain.style.display = "block"
-}
 
 icons.forEach((icon)=> { 
     icon.addEventListener( 'click' , 
@@ -95,7 +88,15 @@ function addData (){
         error.style.display = 'block'
         errRol.style.display = 'block'
     }
-    inform.moreInformation = moreInformation.value;
+    inform.moreInfo = moreInformation.value;
 
     json = JSON.stringify(inform);
+    
+    api.createNewString(0,json).then((response) => { 
+        if(response.message === 'New instance just Created!') {
+            loading.style.display = "none"
+            container.style.display = "block"
+            containerMain.style.display = "block"
+        }
+    }); 
 }

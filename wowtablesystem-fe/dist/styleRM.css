@@ -65,7 +65,7 @@ body{
 
 .raidNameData{
     width: 100%;
-    height: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(250px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #fff;
     border-radius: 15px;
     display: flex;
@@ -93,12 +93,20 @@ body{
     align-items: center;
 }
 
+.activeText { 
+    color:rgba(255, 80, 47, 0.5)!important; 
+}
+
+.activeBlock { 
+    background-color: rgba(255, 80, 47, 0.5)!important;
+}
+
 .nameRaid{
     display: flex; 
     justify-content: flex-start;
     align-content: center; 
     box-sizing: border-box;
-    background-color: rgba(255, 80, 47, 0.3);
+    background-color: rgb(218 218 218);
     margin-left: calc(23px + (37 - 23) * ((100vw - 1200px) / (1920 - 1200)));
     margin-top: calc(16px + (28 - 16) * ((100vw - 1200px) / (1920 - 1200)));
     width: calc(440px + (700 - 440) * ((100vw - 1200px) / (1920 - 1200)));
@@ -117,7 +125,7 @@ body{
     justify-content: flex-start;
     align-content: center; 
     box-sizing: border-box;
-    background-color: #004D61;
+    background-color: rgb(218 218 218);
     color: rgba(132, 132, 132, 0.88);
     margin-top: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
     width: calc(420px + (666 - 420) * ((100vw - 1200px) / (1920 - 1200)));
@@ -141,7 +149,7 @@ body{
 }
 
 .inputNameRaid{
-    color: rgba(255, 80, 47);
+    color: rgba(132, 132, 132);
     background-color: rgba(255, 80, 47, 0);
     width: calc(440px + (700 - 440) * ((100vw - 1200px) / (1920 - 1200)));
     padding: 0;
@@ -247,7 +255,6 @@ body{
     text-decoration: none
 }
 
-
 /* loading */
 
 .loading{
@@ -262,4 +269,26 @@ body{
     height: 40vh;
     transform: scale(1);
     border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+
+#nicknameBox{
+    margin-left: 35px;
+    margin-top: 30px;
+    height: 60px;
+    width: 700px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #004D61;
+    font-size: 50px;
+    text-transform: uppercase;
+}
+
+#nicknameBox:focus{
+    outline: none;
+    color:#FF502F;
+    border-bottom-color: #FF502F;
+}
+
+.nicknameRaid{
+    margin-left: calc(10px + (37 - 23) * ((100vw - 1200px) / (1920 - 1200)));
 }

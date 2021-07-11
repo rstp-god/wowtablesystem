@@ -7,7 +7,9 @@ const nameRaid = document.getElementById("raid"),
     raidName = document.getElementsByClassName("nameRaid")[0],
     submitButton = document.getElementsByClassName("addRaid")[0],
     error = document.getElementById('error'),
-    errRaid = document.getElementById('errRaid')
+    errRaid = document.getElementById('errRaid'), 
+    inputNameRaid = document.getElementsByClassName('inputNameRaid'),
+    divNameRaid = document.getElementsByClassName('nameRaid');
 
 const loading = document.getElementsByClassName("loading")[0],
     container = document.getElementsByClassName("container")[0],
@@ -41,35 +43,44 @@ raidName.addEventListener("click", () => {
 })
 
 valueR[1].addEventListener("click", () => {
-    valueR[0].value = valueR[1].value
-    valueRaid.style.display = "none"
+    valueR[0].value = valueR[1].value ;
+    valueRaid.style.display = "none" ;
+    inputNameRaid[0].classList.add('activeText');
+    divNameRaid[0].classList.add('activeBlock');
+
 })
 valueR[2].addEventListener("click", () => {
-    valueR[0].value = valueR[2].value
-    valueRaid.style.display = "none"
+    valueR[0].value = valueR[2].value ;
+    valueRaid.style.display = "none" ;
+    inputNameRaid[0].classList.add('activeText');
+    divNameRaid[0].classList.add('activeBlock');
 })
 valueR[3].addEventListener("click", () => {
-    valueR[0].value = valueR[3].value
-    valueRaid.style.display = "none"
+    valueR[0].value = valueR[3].value ;
+    valueRaid.style.display = "none" ;
+    inputNameRaid[0].classList.add('activeText');
+    divNameRaid[0].classList.add('activeBlock');
 })
 valueR[4].addEventListener("click", () => {
-    valueR[0].value = valueR[4].value
-    valueRaid.style.display = "none"
+    valueR[0].value = valueR[4].value ;
+    valueRaid.style.display = "none" ;
+    inputNameRaid[0].classList.add('activeText');
+    divNameRaid[0].classList.add('activeBlock');
 })
 
 submitButton.addEventListener("click", () => {
 
-    error.style.display = 'none'
-    errRaid.style.display = 'none'
+    error.style.display = 'none' ;
+    errRaid.style.display = 'none' ;
 
     if (valueR[0].value == "ВЫБЕРИ ЗДЕСЬ") {
-        error.style.display = 'block'
-        errRaid.style.display = 'block'
+        error.style.display = 'block' ;
+        errRaid.style.display = 'block' ;
     }else{
-        raidInform.raid = valueR[0].value
+        raidInform.raid = valueR[0].value ;
 
-        raidInform.data = dateRaid.value
+        raidInform.data = dateRaid.value ;
 
-        json = JSON.stringify(raidInform)
+        json = JSON.stringify(raidInform) ;
     }
 })
