@@ -23,6 +23,7 @@ body{
     background: #FFF;
     border-radius: 15px;
     margin-top: 100px;
+    display: none;
 }
 
 .one{
@@ -98,6 +99,7 @@ body{
 .MainContainer{
     font: 40px Bebas;
     letter-spacing: 5px;
+    display: none;
 }
 
 .warn{
@@ -295,4 +297,20 @@ label > input + img,.Choises{ /* IMAGE STYLES */
 
 label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
     opacity: 1; 
+}
+
+/* loading */
+
+.loading{
+    background-color: #004D61;
+    text-align: center; 
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.loadingLogo{
+    background-color: #004D61;
+    margin-top: 20vh;
+    height: 40vh;
+    transform: scale(1);
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
 }

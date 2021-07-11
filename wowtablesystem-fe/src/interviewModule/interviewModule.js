@@ -10,14 +10,29 @@ let dots = document.getElementsByName('class'),
     errRol = document.getElementById('errRol')
    
 let inform = {
-    nickName: undefined,
-    class: undefined,
-    role: undefined,
-    moreInformation: undefined
+        nickName: undefined,
+        class: undefined,
+        role: undefined,
+        moreInformation: undefined
     },
     PrevRaidRole = undefined,
     PrevClassName = undefined,
     json; 
+
+const loading = document.getElementsByClassName("loading")[0],
+    container = document.getElementsByClassName("container")[0],
+    containerMain = document.getElementsByClassName("MainContainer")[0]
+
+let xhr = new XMLHttpRequest(); 
+xhr.open("GET", "interviewModule.html", false)
+xhr.send();
+console.log(xhr.status)
+
+if(xhr.status == 200){
+    loading.style.display = "none"
+    container.style.display = "block"
+    containerMain.style.display = "block"
+}
 
 icons.forEach((icon)=> { 
     icon.addEventListener( 'click' , 
@@ -44,23 +59,31 @@ function addData (){
     errNick.style.display = 'none'
     errClass.style.display = 'none'
     errRol.style.display = 'none'
+    let checkedInfotm = {
+        nickName: false,
+        class: false,
+        role: false
+    }
     
     inform.nickName = nickName.value;
     if(!inform.nickName){
         error.style.display = 'block'
         errNick.style.display = 'block'
+        checkedInfotm.nickName = true
     }
         
     
     for (let i = 0; i < dots.length; i++) {
     if (dots[i].checked) {
         inform.class = dots[i].value
+        checkedInfotm.class = true
         break;
     }
     }
     for (let i = 0; i < role.length; i++) {
     if (role[i].checked) {
         inform.role = role[i].value
+        checkedInfotm.role = true
         break;
     }
     }
@@ -76,4 +99,3 @@ function addData (){
 
     json = JSON.stringify(inform);
 }
-
