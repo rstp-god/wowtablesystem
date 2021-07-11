@@ -247,3 +247,19 @@ body{
     border-bottom: 4px solid #FF502F;
     color: #FF502F;
 }
+
+/* loading */
+
+.loading{
+    background-color: #004D61;
+    text-align: center; 
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.loadingLogo{
+    background-color: #004D61;
+    margin-top: 20vh;
+    height: 40vh;
+    transform: scale(1);
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}
