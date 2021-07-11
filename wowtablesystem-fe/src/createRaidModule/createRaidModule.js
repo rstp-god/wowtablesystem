@@ -20,6 +20,10 @@ const nameRaid = document.getElementById("raid"),
 
 dateRaid.value=formattedDate(date);
 
+const loading = document.getElementsByClassName("loading")[0],
+    container = document.getElementsByClassName("container")[0],
+    containerHead = document.getElementsByClassName("container-head")[0]
+
 let valueRaidCheck = false,
     raid, 
     raidInform = {
@@ -64,6 +68,8 @@ valueR[4].addEventListener("click", () => {
 })
 
 submitButton.addEventListener("click", () => {
+    
+    loadingStart();
 
     error.style.display = 'none' ;
     errRaid.style.display = 'none' ;
@@ -94,6 +100,7 @@ submitButton.addEventListener("click", () => {
         raidInform.dueDate = dateRaid.value ;
         raidInform.encryptedUrlToTable = uuid(); 
         json = JSON.stringify(raidInform) ;
+
         raidApi.createNewRaid(raid,json).then((res)=> { 
             // TODO loading end
             if(res.message === 'New instance just Created!') {
@@ -107,7 +114,22 @@ submitButton.addEventListener("click", () => {
             }
         });
     }
-})
+});
+
+loadingEnd(); 
+
+
+function loadingStart() {
+    loading.style.display = "block"
+    container.style.display = "none"
+    containerHead.style.display = "none"
+}
+
+function loadingEnd() {
+    loading.style.display = "none"
+    container.style.display = "block"
+    containerHead.style.display = "block"
+}
 
 function formattedDate(d) {
     let month = String(d.getMonth() + 1);
@@ -118,4 +140,4 @@ function formattedDate(d) {
     if (day.length < 2) day = '0' + day;
   
     return `${year}-${month}-${day}`;
-  }
+}

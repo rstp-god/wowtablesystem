@@ -14,14 +14,19 @@ let dots = document.getElementsByName('class'),
     errRol = document.getElementById('errRol')
    
 let inform = {
-    nickName: undefined,
-    class: undefined,
-    role: undefined,
-    moreInfo: undefined
+        nickName: undefined,
+        class: undefined,
+        role: undefined,
+        moreInformation: undefined
     },
     PrevRaidRole = undefined,
     PrevClassName = undefined,
     json; 
+
+const loading = document.getElementsByClassName("loading")[0],
+    container = document.getElementsByClassName("container")[0],
+    containerMain = document.getElementsByClassName("MainContainer")[0];
+
 
 icons.forEach((icon)=> { 
     icon.addEventListener( 'click' , 
@@ -40,31 +45,42 @@ icons.forEach((icon)=> {
     }); 
 }); 
 
-submitButton.addEventListener('click', addData)
+submitButton.addEventListener('click', addData);
+loadingEnd();
 
 function addData (){
+
+    loadingStart();
 
     error.style.display = 'none'
     errNick.style.display = 'none'
     errClass.style.display = 'none'
     errRol.style.display = 'none'
+    let checkedInfotm = {
+        nickName: false,
+        class: false,
+        role: false
+    }
     
     inform.nickName = nickName.value;
     if(!inform.nickName){
         error.style.display = 'block'
         errNick.style.display = 'block'
+        checkedInfotm.nickName = true
     }
         
     
     for (let i = 0; i < dots.length; i++) {
     if (dots[i].checked) {
         inform.class = dots[i].value
+        checkedInfotm.class = true
         break;
     }
     }
     for (let i = 0; i < role.length; i++) {
     if (role[i].checked) {
         inform.role = role[i].value
+        checkedInfotm.role = true
         break;
     }
     }
@@ -82,10 +98,20 @@ function addData (){
     
     api.createNewString(0,json).then((response) => { 
         if(response.message === 'New instance just Created!') {
-            console.log('DONE');
-            // TODO : REPLACE FOR END LOADING
+            loadingEnd(); 
         }
     }); 
 }
 
 
+function loadingStart() {
+    loading.style.display = "block"
+    container.style.display = "none"
+    containerMain.style.display = "none"
+}
+
+function loadingEnd() {
+    loading.style.display = "none"
+    container.style.display = "block"
+    containerMain.style.display = "block"
+}
