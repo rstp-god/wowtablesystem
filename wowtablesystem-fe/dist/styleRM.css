@@ -20,6 +20,7 @@ body{
     margin: 0 auto;
     width: calc(1200px + (1920 - 1200) * ((100vw - 1200px) / (1920 - 1200)));
     height: calc(280px + (448 - 280) * ((100vw - 1200px) / (1920 - 1200)));
+    display: none;
 }
 
 .logo{
@@ -59,6 +60,7 @@ body{
     width: calc(700px + (1100 - 700) * ((100vw - 1200px) / (1920 - 1200)));
     height: 600px;
     margin: 32px auto 0;
+    display: none;
 }
 
 .raidNameData{
@@ -220,6 +222,7 @@ body{
     font-family: Bebas;
     font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     color:white;
+    cursor: pointer;
 }
 
 .addRaid:focus{
@@ -251,6 +254,21 @@ body{
     color: inherit; 
     text-decoration: none
 }
+
+/* loading */
+
+.loading{
+    background-color: #004D61;
+    text-align: center; 
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.loadingLogo{
+    background-color: #004D61;
+    margin-top: 20vh;
+    height: 40vh;
+    transform: scale(1);
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
 
 #nicknameBox{
     margin-left: 35px;

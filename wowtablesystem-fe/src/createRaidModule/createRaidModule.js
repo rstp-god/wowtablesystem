@@ -11,6 +11,21 @@ const nameRaid = document.getElementById("raid"),
     inputNameRaid = document.getElementsByClassName('inputNameRaid'),
     divNameRaid = document.getElementsByClassName('nameRaid');
 
+const loading = document.getElementsByClassName("loading")[0],
+    container = document.getElementsByClassName("container")[0],
+    containerHead = document.getElementsByClassName("container-head")[0]
+
+let xhr = new XMLHttpRequest(); 
+xhr.open("GET", "createRaidModule.html", false)
+xhr.send();
+console.log(xhr.status)
+
+if(xhr.status == 200){
+    loading.style.display = "none"
+    container.style.display = "block"
+    containerHead.style.display = "block"
+}
+
 let valueRaidCheck = false,
     raidInform = {
         raid: undefined,
