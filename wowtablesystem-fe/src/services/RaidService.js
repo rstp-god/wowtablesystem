@@ -10,7 +10,7 @@ export default class RaidService {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(json)
+            body: json,
         });   
         return response.json(); 
     }
