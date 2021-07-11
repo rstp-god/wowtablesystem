@@ -15,17 +15,6 @@ const loading = document.getElementsByClassName("loading")[0],
     container = document.getElementsByClassName("container")[0],
     containerHead = document.getElementsByClassName("container-head")[0]
 
-let xhr = new XMLHttpRequest(); 
-xhr.open("GET", "createRaidModule.html", false)
-xhr.send();
-console.log(xhr.status)
-
-if(xhr.status == 200){
-    loading.style.display = "none"
-    container.style.display = "block"
-    containerHead.style.display = "block"
-}
-
 let valueRaidCheck = false,
     raidInform = {
         raid: undefined,
@@ -69,6 +58,8 @@ valueR[4].addEventListener("click", () => {
 })
 
 submitButton.addEventListener("click", () => {
+    
+    loadingStart();
 
     error.style.display = 'none' ;
     errRaid.style.display = 'none' ;
@@ -82,5 +73,21 @@ submitButton.addEventListener("click", () => {
         raidInform.data = dateRaid.value ;
 
         json = JSON.stringify(raidInform) ;
+        loadingEnd(); 
     }
-})
+});
+
+loadingEnd(); 
+
+
+function loadingStart() {
+    loading.style.display = "block"
+    container.style.display = "none"
+    containerHead.style.display = "none"
+}
+
+function loadingEnd() {
+    loading.style.display = "none"
+    container.style.display = "block"
+    containerHead.style.display = "block"
+}

@@ -269,8 +269,9 @@ body{
     height: 40vh;
     transform: scale(1);
     border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}
 
-#nicknameBox{
+#nicknameBox {
     margin-left: 35px;
     margin-top: 30px;
     height: 60px;

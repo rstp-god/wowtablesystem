@@ -25,7 +25,8 @@ let inform = {
 
 const loading = document.getElementsByClassName("loading")[0],
     container = document.getElementsByClassName("container")[0],
-    containerMain = document.getElementsByClassName("MainContainer")[0]
+    containerMain = document.getElementsByClassName("MainContainer")[0];
+
 
 icons.forEach((icon)=> { 
     icon.addEventListener( 'click' , 
@@ -44,9 +45,12 @@ icons.forEach((icon)=> {
     }); 
 }); 
 
-submitButton.addEventListener('click', addData)
+submitButton.addEventListener('click', addData);
+loadingEnd();
 
 function addData (){
+
+    loadingStart();
 
     error.style.display = 'none'
     errNick.style.display = 'none'
@@ -94,9 +98,20 @@ function addData (){
     
     api.createNewString(0,json).then((response) => { 
         if(response.message === 'New instance just Created!') {
-            loading.style.display = "none"
-            container.style.display = "block"
-            containerMain.style.display = "block"
+            loadingEnd(); 
         }
     }); 
+}
+
+
+function loadingStart() {
+    loading.style.display = "block"
+    container.style.display = "none"
+    containerMain.style.display = "none"
+}
+
+function loadingEnd() {
+    loading.style.display = "none"
+    container.style.display = "block"
+    containerMain.style.display = "block"
 }
