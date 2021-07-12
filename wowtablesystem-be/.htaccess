@@ -1,7 +1,0 @@
-SetEnv GHOST_NODE_VERSION_CHECK false
-PassengerStartupFile main.js
-PassengerResolveSymlinksInDocumentRoot on
-Require all granted
-PassengerAppType node
-PassengerAppRoot /home/a0540172/domains/sundancex.ru/public_html/api/dist
-Options -MultiViews 
