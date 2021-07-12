@@ -16,7 +16,7 @@ export default class CookieService {
 
     //вызывай так же для обновления кукисов, я че тебе сто мильонов функций пилить буду ага нахуй иди
     setCookie = (cookieName, value)=> { 
-        this._cookies = `${cookieName}=${value}`
+        this._cookies = '' + cookieName + '=' + value;
     }
 
 }

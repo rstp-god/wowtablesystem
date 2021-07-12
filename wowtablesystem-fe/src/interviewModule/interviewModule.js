@@ -1,6 +1,11 @@
 import StringInTables from '../services/StringInTables';
+import CookieService from '../services/CookieService';
+import RaidService from '../services/RaidService';
 
-const api = new StringInTables(); 
+
+const api = new StringInTables(),
+      cookies  = new CookieService(), 
+      apiRaids = new RaidService(); 
 
 let dots = document.getElementsByName('class'),
     submitButton = document.getElementById('submitButton'),
@@ -13,13 +18,26 @@ let dots = document.getElementsByName('class'),
     errClass = document.getElementById('errClass'),
     errRol = document.getElementById('errRol'),
     complete = document.querySelector('.complete'), 
-    success = document.querySelector('.success');
-   
+    success = document.querySelector('.success'), 
+    header = document.querySelector('.text'), 
+    dateBlock = document.getElementsByTagName('time'),
+    Url = window.location.search;
+
+
+const UUID = Url.slice(6,Url.indexOf('&')),
+      raid = +Url.slice(Url.indexOf('&')+6,Url.lastIndexOf('&')), 
+      RaidLeader = Url.slice(Url.lastIndexOf('&')+4);
+
+      alreadyRegistered(); 
+      registerAllowed();
+
 let inform = {
         nickName: undefined,
         class: undefined,
         role: undefined,
-        moreInformation: undefined
+        moreInformation: undefined,
+        nicknameOfRL: RaidLeader, 
+        encryptedUrl: UUID, 
     },
     PrevRaidRole = undefined,
     PrevClassName = undefined,
@@ -28,6 +46,8 @@ let inform = {
 const loading = document.getElementsByClassName("loading")[0],
     container = document.getElementsByClassName("container")[0],
     containerMain = document.getElementsByClassName("MainContainer")[0];
+
+
 
 
 icons.forEach((icon)=> { 
@@ -98,7 +118,7 @@ function addData (){
 
     json = JSON.stringify(inform);
     
-    api.createNewString(0,json).then((response) => { 
+    api.createNewString(raid,json).then((response) => { 
         if(response.message === 'New instance just Created!') {
             loadingEnd(); 
             successResponse();
@@ -122,4 +142,51 @@ function loadingEnd() {
 function successResponse() { 
     complete.style.display = 'flex'; 
     success.style.display = 'flex'; 
+    containerMain.style.display = "none"
+    document.cookie = 'flag = already registerd expires 7d'; 
+}
+
+function alreadyRegistered() { 
+    if(cookies.getCookiebyName('flag') !== undefined) { 
+        complete.style.display = 'flex';
+        success.textContent = 'Ты уже зарегистрировался в этот рейд!'; 
+        success.style.display = 'flex'; 
+        loadingEnd();
+    }
+}
+
+function alreadyEnd() {
+    complete.style.display = 'flex';
+    success.textContent = 'Упс, регистрация уже закончилась! В следующий раз обязательно успеешь!'; 
+    success.style.display = 'flex'; 
+    containerMain.style.display = "none"
+}
+
+function registerAllowed() { 
+    apiRaids.getRaidsByUUID(raid,UUID).then((response) => { 
+        let expiresDate = new Date(response[0].dueDate), 
+            today = new Date(); 
+        if (expiresDate <= today)  {
+            alreadyEnd();
+        }
+        switch(raid) {
+            case 0: { 
+                header.textContent = 'Каражан'
+                break; 
+            }
+            case 1: { 
+                header.textContent = 'Логово Магтеридона'
+                break; 
+            }
+            case 2: { 
+                header.textContent = 'Наксрамас'
+                break; 
+            }
+            case 3: { 
+                header.textContent = 'Логово груула'
+                break; 
+            }
+        }
+        dateBlock[0].innerHTML=expiresDate.toLocaleDateString();
+    })
 }

@@ -47,7 +47,7 @@ if(window.location.hash !== '') {
         nickname = res[0].creatorNickName; 
         newUrl = `${urltoInterview.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/interviewModule.html?uuid=${window.location.hash.slice(1,window.location.hash.indexOf('&'))}&RAID=${raidIndex}&RL=${nickname}`; 
         urltoInterview.href = newUrl;
-        newUrl = `${urltoTable.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/reviewTableModule.html?uuid=${window.location.hash}&RAID=${raidIndex}`; 
+        newUrl = `${urltoTable.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/reviewTableModule.html?uuid=${window.location.hash.slice(1,window.location.hash.indexOf('&'))}&RAID=${raidIndex}&RL=${nickname}`; 
         urltoTable.href = newUrl; 
     });
     successResponse(); 
@@ -137,7 +137,7 @@ submitButton.addEventListener("click", () => {
                 urltoInterview.href = newUrl;
                 newUrl = `${urltoTable.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/reviewTableModule.html?uuid=${raidInform.encryptedUrlToTable}&RAID=${raid}`; 
                 urltoTable.href = newUrl; 
-                window.location.hash = raidInform.encryptedUrlToTable + '&RAID=' + raid; 
+                window.location.hash = raidInform.encryptedUrlToTable + '&RAID=' + raid + '&RL=' + nicknameOfRl.value; 
                 successResponse(); 
                 loadingEnd(); 
             }
@@ -174,4 +174,5 @@ function formattedDate(d) {
 function successResponse() { 
     complete.style.display = 'flex'; 
     success.style.display = 'flex'; 
+    submitButton.disabled = true; 
 }
