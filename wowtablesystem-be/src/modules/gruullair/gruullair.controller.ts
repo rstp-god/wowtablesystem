@@ -2,6 +2,8 @@ import { Controller, Get, Post, Delete, Body, Param, HttpException, HttpStatus }
 import { GruullairService } from './gruullair.service';
 import { Gruullair } from 'src/entities/Gruullair.entity';
 import CreateNewInstace from 'src/dto/NewInstance.dto';
+import { Query } from '@nestjs/common';
+import { UuidQuery } from 'src/dto/Query.dto';
 
 
 @Controller('gruullair')
@@ -12,6 +14,11 @@ export class GruullairController {
     @Get()
     getAll(): Promise<Gruullair[]> {
         return this.Service.findAll(); 
+    }
+
+    @Get('/query')
+    getAllByEncryptedUrl(@Query() params: UuidQuery): Promise<Gruullair[]> {
+        return this.Service.findAllByQuery(params); 
     }
 
     @Get(':nickname')

@@ -1,5 +1,6 @@
 import {v4 as uuid} from "uuid";
 import RaidService from "../services/RaidService";
+import StringInTables from "../services/StringInTables";
 
 const nameRaid = document.getElementById("raid"),
     dateRaid = document.getElementById("day"),
@@ -15,6 +16,10 @@ const nameRaid = document.getElementById("raid"),
     divNameRaid = document.getElementsByClassName('nameRaid'),
     urltoInterview = document.querySelectorAll('.url')[0],
     urltoTable =document.querySelectorAll('.url')[1],
+    nicknameOfRl = document.querySelector('#nicknameBox'),
+    errNick = document.querySelector('#errNick'),
+    complete = document.querySelector('.complete'), 
+    success = document.querySelector('.success'),
     date = new Date(),
     raidApi = new RaidService;
 
@@ -27,10 +32,26 @@ const loading = document.getElementsByClassName("loading")[0],
 let valueRaidCheck = false,
     raid, 
     raidInform = {
+        creatorNickName: undefined,
         dueDate: undefined, 
         encryptedUrlToTable: undefined
     },
     json;
+
+if(window.location.hash !== '') {
+    let nickname = '', 
+        newUrl ='',
+        raidIndex = window.location.hash.slice(window.location.hash.indexOf('&')+6); 
+    raidApi.getRaidsByUUID(raidIndex,window.location.hash.slice(1,window.location.hash.indexOf('&')))
+    .then((res) => {
+        nickname = res[0].creatorNickName; 
+        newUrl = `${urltoInterview.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/interviewModule.html?uuid=${window.location.hash.slice(1,window.location.hash.indexOf('&'))}&RAID=${raidIndex}&RL=${nickname}`; 
+        urltoInterview.href = newUrl;
+        newUrl = `${urltoTable.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/reviewTableModule.html?uuid=${window.location.hash}&RAID=${raidIndex}`; 
+        urltoTable.href = newUrl; 
+    });
+    successResponse(); 
+}
 
 raidName.addEventListener("click", () => {
     if (!valueRaidCheck) {
@@ -73,10 +94,17 @@ submitButton.addEventListener("click", () => {
 
     error.style.display = 'none' ;
     errRaid.style.display = 'none' ;
+    errNick.style.display = 'none';
 
-    if (valueR[0].value == "ВЫБЕРИ ЗДЕСЬ") {
-        error.style.display = 'block' ;
-        errRaid.style.display = 'block' ;
+    if(nicknameOfRl.value === '') {
+        error.style.display = 'flex' ;
+        errNick.style.display = 'flex';
+        loadingEnd(); 
+    }
+    if (valueR[0].value === "ВЫБЕРИ ЗДЕСЬ") {
+        error.style.display = 'flex' ;
+        errRaid.style.display = 'flex' ;
+        loadingEnd(); 
     }else{
          switch(valueR[0].value) {
              case 'Каражан': { 
@@ -99,18 +127,19 @@ submitButton.addEventListener("click", () => {
 
         raidInform.dueDate = dateRaid.value ;
         raidInform.encryptedUrlToTable = uuid(); 
+        raidInform.creatorNickName = nicknameOfRl.value;
         json = JSON.stringify(raidInform) ;
 
         raidApi.createNewRaid(raid,json).then((res)=> { 
-            // TODO loading end
             if(res.message === 'New instance just Created!') {
                 let newUrl =''; 
-                newUrl = `${urltoInterview.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/interviewModule.html?uuid=${raidInform.encryptedUrlToTable}`; 
+                newUrl = `${urltoInterview.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/interviewModule.html?uuid=${raidInform.encryptedUrlToTable}&RAID=${raid}&RL=${nicknameOfRl.value}`; 
                 urltoInterview.href = newUrl;
-                console.log(urltoInterview);
-                newUrl = `${urltoTable.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/reviewTableModule.html?uuid=${raidInform.encryptedUrlToTable}`; 
+                newUrl = `${urltoTable.href.slice(0,urltoInterview.href.lastIndexOf('/'))}/reviewTableModule.html?uuid=${raidInform.encryptedUrlToTable}&RAID=${raid}`; 
                 urltoTable.href = newUrl; 
-                console.log(urltoTable); 
+                window.location.hash = raidInform.encryptedUrlToTable + '&RAID=' + raid; 
+                successResponse(); 
+                loadingEnd(); 
             }
         });
     }
@@ -140,4 +169,9 @@ function formattedDate(d) {
     if (day.length < 2) day = '0' + day;
   
     return `${year}-${month}-${day}`;
+}
+
+function successResponse() { 
+    complete.style.display = 'flex'; 
+    success.style.display = 'flex'; 
 }

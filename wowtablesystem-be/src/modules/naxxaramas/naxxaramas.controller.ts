@@ -2,6 +2,8 @@ import { Controller, Get, Post, Delete, Body, Param, HttpException, HttpStatus }
 import { NaxxaramasService } from './naxxaramas.service';
 import { Naxxramas } from 'src/entities/Naxxramas.entity';
 import CreateNewInstace from 'src/dto/NewInstance.dto';
+import { Query } from '@nestjs/common';
+import { UuidQuery } from 'src/dto/Query.dto';
 
 @Controller('naxxaramas')
 export class NaxxaramasController {
@@ -11,6 +13,11 @@ export class NaxxaramasController {
     @Get()
     getAll(): Promise<Naxxramas[]> {
         return this.Service.findAll(); 
+    }
+
+    @Get('/query')
+    getAllByEncryptedUrl(@Query() params: UuidQuery): Promise<Naxxramas[]> {
+        return this.Service.findAllByQuery(params); 
     }
 
     @Get(':nickname')

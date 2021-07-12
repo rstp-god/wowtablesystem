@@ -8,10 +8,10 @@ export class Magterion {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ type: 'date' }) 
+    @Column() 
     dueDate: string; 
 
-    @Column({ type: 'date' }) 
+    @Column() 
     creationDate: string; 
 
     @Column() 

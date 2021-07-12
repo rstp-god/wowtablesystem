@@ -8,7 +8,17 @@
     src: url(font/bebasneuebold.ttf);
 }
 
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(font/bebasneuelight.ttf)
+}
+
 body{
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 50px;
     background-color: #004D61;
     width: 1700px;
     margin: 0 auto;
@@ -182,6 +192,23 @@ body{
     border: none;
     border-collapse: collapse;
     font: 30px Bebas;
+}
+
+.imgContent {
+    display: flex; 
+    align-content: center; 
+    align-items: center;
+}
+
+.textInTable {
+    margin: 0 0;
+    padding-left: 10px;
+    color: #004D61;
+    letter-spacing: 0.15em;
+}
+
+.icons {
+    transform: scale(0.8);
 }
 
 .tableLines{

@@ -2,6 +2,7 @@ import { Controller, Get, Param, Query, Post, HttpException, Body, HttpStatus, D
 import { MagterionService } from './magterion.service';
 import { Magterion } from 'src/entities/Magterion.entity';
 import CreateNewInstace from 'src/dto/NewInstance.dto';
+import { UuidQuery } from 'src/dto/Query.dto';
 
 @Controller('magterion')
 export class MagterionController {
@@ -11,6 +12,11 @@ export class MagterionController {
     @Get()
     getAll(): Promise<Magterion[]>{
         return this.Service.findAll(); 
+    }
+
+    @Get('/query')
+    getAllByEncryptedUrl(@Query() params: UuidQuery): Promise<Magterion[]> {
+        return this.Service.findAllByQuery(params); 
     }
 
     @Get(':nickname')

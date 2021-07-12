@@ -15,6 +15,17 @@ export default class RaidService {
         return response.json(); 
     }
 
+    getRaidsByUUID = async (raid,uuid) => { 
+        const response = await fetch(`${this._apiURL}/${this.TableEnum[raid]}/query?uuid=${uuid}`,{ 
+            method: 'GET', 
+            mode: 'cors', 
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });   
+        return response.json(); 
+    }
+
     getRaidsByNickname = async (raid,nickname) => {
         const response = await fetch(`${this._apiURL}/${this.TableEnum[raid]}/${nickname}`,{ 
             method: 'GET', 

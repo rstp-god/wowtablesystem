@@ -11,7 +11,9 @@ let dots = document.getElementsByName('class'),
     error = document.getElementById('error'),
     errNick = document.getElementById('errNick'),
     errClass = document.getElementById('errClass'),
-    errRol = document.getElementById('errRol')
+    errRol = document.getElementById('errRol'),
+    complete = document.querySelector('.complete'), 
+    success = document.querySelector('.success');
    
 let inform = {
         nickName: undefined,
@@ -99,6 +101,7 @@ function addData (){
     api.createNewString(0,json).then((response) => { 
         if(response.message === 'New instance just Created!') {
             loadingEnd(); 
+            successResponse();
         }
     }); 
 }
@@ -114,4 +117,9 @@ function loadingEnd() {
     loading.style.display = "none"
     container.style.display = "block"
     containerMain.style.display = "block"
+}
+
+function successResponse() { 
+    complete.style.display = 'flex'; 
+    success.style.display = 'flex'; 
 }

@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Gruullair } from 'src/entities/Gruullair.entity';
 import { Repository } from 'typeorm';
+import { UuidQuery } from 'src/dto/Query.dto';
 
 @Injectable()
 export class GruullairService {
@@ -13,6 +14,10 @@ export class GruullairService {
 
     async findAll(): Promise<Gruullair[]> { 
         return await this.infoRepo.find(); 
+    }
+
+    async findAllByQuery(params: UuidQuery): Promise<Gruullair[]> {
+        return await this.infoRepo.find({encryptedUrlToTable: params.uuid});
     }
 
     async findByNickName(params): Promise<Gruullair[]> {

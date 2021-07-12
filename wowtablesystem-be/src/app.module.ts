@@ -10,11 +10,30 @@ import { MagterionModule } from './modules/magterion/magterion.module';
 import { MagterionTableModule } from './modules/magterion-table/magterion-table.module';
 import { NaxxaramasModule } from './modules/naxxaramas/naxxaramas.module';
 import { NaxxaramasTableModule } from './modules/naxxaramas-table/naxxaramas-table.module';
+import { Carajan } from './entities/Carajan.entity';
+import { CarajanTable } from './entities/CarajanTable.entity';
+import { Gruullair } from './entities/Gruullair.entity';
+import { GruullairTable } from './entities/GruullairTable.entity';
+import { Magterion } from './entities/Magterion.entity';
+import { MagterionTable } from './entities/MagterionTable.entity';
+import { Naxxramas } from './entities/Naxxramas.entity';
+import { NaxxramasTable } from './entities/NaxxramasTable.entity';
 
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot(), 
+    TypeOrmModule.forRoot(
+      {    
+        type: "mysql",
+        host: "localhost",
+        port: 3306,
+        username: "a0540172_prod",
+        password: "CG2gBUYI",
+        database: "a0540172_wowtables",
+        entities: [Carajan,CarajanTable,Gruullair,GruullairTable,Magterion,MagterionTable,Naxxramas,NaxxramasTable],
+        synchronize: true
+    }
+    ), 
     CarajanModule,
     CarajanTableModule, 
     GruullairModule, 

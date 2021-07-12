@@ -2,6 +2,7 @@ import { Controller, Get, Post, Param, Body, HttpException, HttpStatus, Query, D
 import { CarajanService } from './carajan.service';
 import { Carajan } from 'src/entities/Carajan.entity';
 import CreateNewInstace from 'src/dto/NewInstance.dto';
+import { UuidQuery } from 'src/dto/Query.dto';
 
 @Controller('carajan')
 export class CarajanController {
@@ -11,6 +12,11 @@ export class CarajanController {
     @Get()
     getAll(): Promise<Carajan[]>{
         return this.Service.findAll(); 
+    }
+
+    @Get('/query')
+    getAllByEncryptedUrl(@Query() params: UuidQuery): Promise<Carajan[]> {
+        return this.Service.findAllByQuery(params); 
     }
 
     @Get(':nickname')
