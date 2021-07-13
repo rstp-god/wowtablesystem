@@ -28,100 +28,32 @@ body{
 
 /* header */
 
-.container{
-    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(318.75px + (510 - 318.75) * ((100vw - 1200px) / (1920 - 1200)));
-    background: #FFF;
-    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
-    margin-top: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
-    margin: 0 auto;
-}
-
-.one{
-    background: #FF502F; 
-    width: calc(250px + (400 - 250) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
-    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200))) 0px 0px 0px;
-}
-
-.two{
-    background: #FF502F;
-    float: left;
-    margin-top: calc(100px + (160 - 100) * ((100vw - 1200px) / (1920 - 1200)));
-    width: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(203.125px + (325 - 203.125) * ((100vw - 1200px) / (1920 - 1200)));
-    border-radius: 0px 0px 0px calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
-}
-
-.three{
-    background: #FF502F;
-    float: right;
-    width: calc(250px + (400 - 250) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
-    border-radius: 0px 0px calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200))) 0px;
-}
-
-.block{
-    float: right;
-    width: calc(1031.25px + (1650 - 1031.25) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(287.5px + (460 - 287.5) * ((100vw - 1200px) / (1920 - 1200)));
-}
-
-.logo{
-    background-image: url(img/logoTable.jpg);
-    margin-top: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
-    float: left;
-    width: calc(287.5px + (460 - 287.5) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(287.5px + (460 - 287.5) * ((100vw - 1200px) / (1920 - 1200)));
-    border-radius: calc(218.75px + (350 - 218.75) * ((100vw - 1200px) / (1920 - 1200)));
-    position: absolute;
-}
-
-.name{
-    float: right;
-    background: #004D61;
-    width: calc(937.5px + (1500 - 937.5) * ((100vw - 1200px) / (1920 - 1200)));
-    height: calc(231.25px + (370 - 231.25) * ((100vw - 1200px) / (1920 - 1200)));
-}
-
 .headerTopBlock{
     height: calc(56.25px + (90 - 56.25) * ((100vw - 1200px) / (1920 - 1200)));
-    width: calc(937.5px + (1500 - 937.5) * ((100vw - 1200px) / (1920 - 1200)));
+    /* width: calc(937.5px + (1500 - 937.5) * ((100vw - 1200px) / (1920 - 1200))); */
     background-color: #ffffff;
+    display: flex;
+    align-items: center;
 }
 
 .headerTopText{
-    margin: 0px calc(312.5px + (500 - 312.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin: 0px auto;
     font: calc(34.375px + (55 - 34.375) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
     text-transform: uppercase;
     color: #FF502F;
     letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
-.text{
-    color: #FF502F;
-    font: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200))) BebasBold;
-    height: calc(112.5px + (180 - 112.5) * ((100vw - 1200px) / (1920 - 1200)));
-    width: calc(562.5px + (900 - 562.5) * ((100vw - 1200px) / (1920 - 1200)));
-    margin-left: calc(312.5px + (500 - 312.5) * ((100vw - 1200px) / (1920 - 1200)));
-    margin-top: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
-
-}
-
 #textLogo{
     letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
-.clock{
-    height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
+.text{
+    margin-top: 0px;
 }
 
-.time{
-    color: #FF502F;
-    font: calc(34.375px + (55 - 34.375) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
-    letter-spacing: calc(5px + (8 - 5) * ((100vw - 1200px) / (1920 - 1200)));
-    margin-left: calc(312.5px + (500 - 312.5) * ((100vw - 1200px) / (1920 - 1200)));
-    margin-top: calc(46.875px + (75 - 46.875) * ((100vw - 1200px) / (1920 - 1200)));
+.clock{
+    height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .choiseBlocks{
