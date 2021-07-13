@@ -1,0 +1,263 @@
+@font-face {
+    font-family: "Bebas";
+    src: url(font/bebasneueregular.ttf);
+}
+
+@font-face {
+    font-family: "BebasBold";
+    src: url(font/bebasneuebold.ttf);
+}
+
+body{
+    background-color: #004D61;
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Main */
+
+.MainContainer{
+    font: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
+    letter-spacing: calc(3.125px + (5 - 3.125) * ((100vw - 1200px) / (1920 - 1200)));
+    display: none;
+}
+
+.warn{
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    text-transform: uppercase;
+    margin-left: calc(187.5px + (300 - 187.5) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.NumberInBox{
+    font-size: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#NicknameBox, #info{
+    margin-left: calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
+    /* height: calc(37.5px + (6 - 37.5) * ((100vw - 1200px) / (1920 - 1200))); */
+    width: calc(437.5px + (700 - 437.5) * ((100vw - 1200px) / (1920 - 1200)));
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #004D61;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    text-transform: uppercase;
+}
+
+#info:focus{
+    outline: none;
+    color:#FF502F;
+    border-bottom-color: #FF502F;
+}
+
+#NicknameBox:focus{
+    outline: none;
+    color:#FF502F;
+    border-bottom-color: #FF502F;
+}
+
+
+#warning{
+    width: calc(625px + (1000 - 625) * ((100vw - 1200px) / (1920 - 1200)));
+    margin: auto;
+    height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
+    background-color: #004D61;
+    color: #ffffff;
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-bottom: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.blocks, #error{
+    margin: 0 auto;
+    margin-bottom: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(625px + (1000 - 625) * ((100vw - 1200px) / (1920 - 1200)));
+    background-color: #ffffff;
+    color: #004D61;
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    display: flex;
+    flex-direction: column;
+}
+
+#error{
+    background: #fff;
+    display: none;
+}
+
+#errNick, #errClass, #errRol{
+    margin: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200))) calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.textInBox{
+    padding: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200))) 0px 0px calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
+    margin: 0;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    text-transform: uppercase;
+}
+
+.stars{
+    color:#FF502F;
+}
+
+#NicknameBlock{
+    height: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#ClassBlock{
+    height: calc(693.75px + (1110 - 693.75) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#RaidRoleBlock{
+    height: calc(275px + (440 - 275) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#InfoBlock{
+    height: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.dots{
+    margin-left: calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
+    transform: scale(2);
+}
+
+.Choises{
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    text-transform: uppercase;
+    margin-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
+    color: #004D61; 
+}
+
+#damager{
+    margin-top: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.ForDots{
+    flex-direction: row;
+    margin-bottom: calc(20.625px + (33 - 20.625) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.WarningText{
+    margin: 0px;
+    font-size: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#WarriorDot{
+    margin-top: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#DamagerDot{
+    margin-top: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.WowIcons{
+    width: calc(38.75px + (62 - 38.75) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(38.75px + (62 - 38.75) * ((100vw - 1200px) / (1920 - 1200)));
+    opacity: 0.60;
+    transform: scale(1);
+}
+
+#submitButton{
+    width: calc(625px + (1000 - 625) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
+    background-color: #FF502F;
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    border: none;
+    margin: 0 auto;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: calc(3.75px + (6 - 3.75) * ((100vw - 1200px) / (1920 - 1200)));
+    position: relative;
+    -webkit-transition-duration: 2s;
+    transition-duration: 2s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#submitButton:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    transition: all 1s;
+}
+
+.complete {
+    display: none; 
+    background: #fff;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    flex-direction: row; 
+    justify-content: center;
+    align-content: center;
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.success {
+    display: none;
+    height: 100%;
+    margin: 0 auto; 
+    font-size: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
+    margin: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200))) calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200))) 0;
+    color: rgba(255, 80, 47, 0.5); 
+}
+
+
+.textButton {
+    margin: 0;  
+    position: relative;
+    z-index: 2;  
+}
+
+
+#submitButton:hover {
+    color: #FF502F;
+}
+
+#submitButton:hover:after { 
+    width: 100%;
+}
+
+._active { 
+    color: #FF502F; 
+}
+
+label > input{ /* HIDE RADIO */
+    visibility: hidden; /* Makes input not-clickable */
+    position: absolute; /* Remove input from document flow */
+}
+
+label > input + img,.Choises{ /* IMAGE STYLES */
+    cursor:pointer;
+}
+
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+    opacity: 1; 
+}
+
+/* loading */
+
+.loading{
+    background-color: #004D61;
+    text-align: center; 
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.loadingLogo{
+    background-color: #004D61;
+    margin-top: 20vh;
+    height: 40vh;
+    transform: scale(1);
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}

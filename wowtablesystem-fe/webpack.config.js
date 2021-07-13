@@ -14,7 +14,8 @@ module.exports = {
   },
   output: {
     filename: '[name].[hash].js',
-    path: __dirname + '/dist/script'
+    path: __dirname + '/dist',
+    clean: true,
   },
   devtool: "source-map",
   devServer: {
@@ -23,7 +24,7 @@ module.exports = {
     port: 5050,
     open: true,
     writeToDisk: true,
-    openPage: 'script/createRaidModule.html',
+    openPage: 'createRaidModule.html',
   },
   plugins: [
     new HTMLWebpackPlugin({ 
@@ -42,6 +43,5 @@ module.exports = {
       filename: `reviewTableModule.html`,
       chunks: ['reviewTableModule'],
     }), 
-    new CleanWebpackPlugin()
   ]
 };

@@ -1,0 +1,221 @@
+@font-face {
+    font-family: "Bebas";
+    src: url(font/bebasneueregular.ttf);
+}
+
+@font-face {
+    font-family: "BebasBold";
+    src: url(font/bebasneuebold.ttf);
+}
+
+@font-face {
+    font-family: "Bebas Neue";
+    src: url(font/bebasneuelight.ttf)
+}
+
+body{
+    font-family: Bebas Neue;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    line-height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
+    background-color: #004D61;
+    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin: 0 auto;
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    box-sizing: border-box;
+}
+
+/* header */
+
+.headerTopBlock{
+    height: calc(56.25px + (90 - 56.25) * ((100vw - 1200px) / (1920 - 1200)));
+    /* width: calc(937.5px + (1500 - 937.5) * ((100vw - 1200px) / (1920 - 1200))); */
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+}
+
+.headerTopText{
+    margin: 0px auto;
+    font: calc(34.375px + (55 - 34.375) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
+    text-transform: uppercase;
+    color: #FF502F;
+    letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#textLogo{
+    letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.text{
+    margin-top: 0px;
+}
+
+.clock{
+    height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.choiseBlocks{
+    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(156.25px + (250 - 156.25) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.menuBlocks{
+    width: calc(375px + (600 - 375) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(93.75px + (150 - 93.75) * ((100vw - 1200px) / (1920 - 1200)));
+    background-color: #ffffff;
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    float: left;
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#roleBlock{
+    width: calc(187.5px + (300 - 187.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(93.75px + (150 - 93.75) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-right: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.choiseMenu{
+    background-color: rgba(132, 132, 132, 0.3);
+    width: calc(337.5px + (540 - 337.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(18.75px + (3 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#choiseInRoleMenu{
+    width: calc(156.25px + (250 - 156.25) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#textInChoiseMenu{
+    color: #848484;
+    padding-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
+    font: calc(43.75px + (70 - 43.75) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
+    margin: 0px;
+    text-transform: uppercase;
+    letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#textInChoiseMenu:hover{
+    background-color: rgba(255, 80, 47, 0.3);
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    color: #FF502F;
+}
+
+
+.insideConteinerDiv{
+    padding: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
+    box-sizing: border-box;
+    background-color: #ffffff;
+    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-bottom: calc(187.5px + (300 - 187.5) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.mainTable{
+    width: calc(1050px + (1680 - 1050) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    border: none;
+    border-collapse: collapse;
+    font: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
+}
+
+.imgContent {
+    display: flex; 
+    align-content: center; 
+    align-items: center;
+}
+
+.textInTable {
+    margin: 0 0;
+    padding-left: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
+    color: #004D61;
+    letter-spacing: 0.15em;
+}
+
+.icons {
+    transform: scale(0.8);
+}
+
+.tableLines{
+    border: 2px solid #FF502F;
+    border-top: none;
+    padding-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.lastTableLines{
+    border: 2px solid #FF502F;
+    border-top: none;
+    padding: 0px;
+    border-bottom: none;
+    padding-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+#numberLine{
+    border-top: none;
+    border-left: none;
+    border-right: 3px solid #FF502F;
+    box-sizing: border-box;
+    width: calc(37.5px + (60 - 37.5) * ((100vw - 1200px) / (1920 - 1200)));
+    padding-left: 0px;
+}
+
+#firstLineBlock{
+    border-left: none;
+    border-right: 3px solid #FF502F;
+    width: calc(37.5px + (60 - 37.5) * ((100vw - 1200px) / (1920 - 1200)));
+    color: #FF502F;
+    font-family: BebasBold;
+    padding-left: calc(10.625px + (17 - 10.625) * ((100vw - 1200px) / (1920 - 1200)));
+    box-sizing: border-box;
+}
+
+#lastLineBlock{
+    border-right: none;
+}
+
+#BottomFirstLineBlock{
+    border-left: none;
+    border-bottom: none;
+    border-right: 3px solid #FF502F;
+    padding-left: calc(10.625px + (17 - 10.625) * ((100vw - 1200px) / (1920 - 1200)));
+    color: #FF502F;
+    font-family: BebasBold;
+}
+
+#BottomLastLineBlock{
+    border-right: none;
+    border-bottom: none;
+}
+
+#highLine{
+    color: #FF502F;
+}
+
+.highLine{
+    padding-left: 0px;
+    border-bottom: 4px solid #FF502F;
+    color: #FF502F;
+}
+
+/* loading */
+
+.loading{
+    background-color: #004D61;
+    text-align: center; 
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}
+
+.loadingLogo{
+    background-color: #004D61;
+    margin-top: 20vh;
+    height: 40vh;
+    transform: scale(1);
+    border-radius: calc(880px + (1048 - 880) * ((100vw - 1200px) / (1920 - 1200)));
+}

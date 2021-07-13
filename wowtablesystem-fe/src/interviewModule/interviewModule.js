@@ -3,8 +3,7 @@ import CookieService from '../services/CookieService';
 import RaidService from '../services/RaidService';
 
 
-const api = new StringInTables(),
-      cookies  = new CookieService(), 
+const api = new StringInTables(), 
       apiRaids = new RaidService(); 
 
 let dots = document.getElementsByName('class'),
@@ -28,7 +27,6 @@ const UUID = Url.slice(6,Url.indexOf('&')),
       raid = +Url.slice(Url.indexOf('&')+6,Url.lastIndexOf('&')), 
       RaidLeader = Url.slice(Url.lastIndexOf('&')+4);
 
-      alreadyRegistered(); 
       registerAllowed();
 
 let inform = {
@@ -144,15 +142,6 @@ function successResponse() {
     success.style.display = 'flex'; 
     containerMain.style.display = "none"
     document.cookie = 'flag = already registerd expires 7d'; 
-}
-
-function alreadyRegistered() { 
-    if(cookies.getCookiebyName('flag') !== undefined) { 
-        complete.style.display = 'flex';
-        success.textContent = 'Ты уже зарегистрировался в этот рейд!'; 
-        success.style.display = 'flex'; 
-        loadingEnd();
-    }
 }
 
 function alreadyEnd() {
