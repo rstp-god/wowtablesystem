@@ -48,7 +48,7 @@ body{
     letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
-.text{
+.name{
     margin-top: 0px;
 }
 
