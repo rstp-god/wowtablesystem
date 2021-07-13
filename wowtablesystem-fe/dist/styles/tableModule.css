@@ -48,10 +48,9 @@ body{
     letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
-.text{
-    margin-top: 0px;
+.name{
+    margin-top: 0;
 }
-
 .clock{
     height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
