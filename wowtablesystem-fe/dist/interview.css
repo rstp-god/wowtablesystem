@@ -10,118 +10,41 @@
 
 body{
     background-color: #004D61;
-    width: 1650px;
     margin: 0 auto;
     box-sizing: border-box;
-}
-
-/* header */
-
-.container{
-    width: 1640px;
-    height: 450px;
-    background: #FFF;
-    border-radius: 15px;
-    margin-top: 100px;
-    display: none;
-}
-
-.one{
-   background: #FF502F; 
-   width: 300px;
-   height: 30px;
-   border-radius: 15px 0px 0px 0px;
-}
-
-.two{
-  background: #FF502F;
-  float: left;
-  margin-top: 50px;
-  width: 30px;
-  height: 370px;
-  border-radius: 0px 0px 0px 15px;
-}
-
-.three{
-  background: #FF502F;
-  float: right;
-   width: 300px;
-   height: 30px;
-   border-radius: 0px 0px 15px 0px;
-}
-
-.block{
-    float: right;
-    width: 1560px;
-    height: 390px;
-}
-
-.logo{
-    background-image: url(img/logo.jpg);
-    margin-top: 20px;
-    float: left;
-    width: 350px;
-    height: 350px;
-    border-radius: 350px;
-    position: absolute;
-}
-
-.name{
-    float: right;
-    background: #004D61;
-    margin-top: 100px;
-    width: 1250px;
-    height: 200px;
-}
-
-.text{
-    color: #FF502F;
-    font: 80px BebasBold;
-    margin: 55px 180px 60px;
-    letter-spacing: 20px;
-}
-
-.clock{
-    height: 100px;
-}
-
-.time{
-    color: #FF502F;
-    font: 80px Bebas;
-    letter-spacing: 10px;
-    font-size: 60px;
-    margin-left: 180px;
-    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Main */
 
 .MainContainer{
-    font: 40px Bebas;
-    letter-spacing: 5px;
+    font: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
+    letter-spacing: calc(3.125px + (5 - 3.125) * ((100vw - 1200px) / (1920 - 1200)));
     display: none;
 }
 
 .warn{
-    font-size: 40px;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     text-transform: uppercase;
-    margin-left: 300px;
+    margin-left: calc(187.5px + (300 - 187.5) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .NumberInBox{
-    font-size: 50px;
+    font-size: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #NicknameBox, #info{
-    margin-left: 35px;
-    margin-top: 30px;
-    height: 60px;
-    width: 700px;
+    margin-left: calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
+    /* height: calc(37.5px + (6 - 37.5) * ((100vw - 1200px) / (1920 - 1200))); */
+    width: calc(437.5px + (700 - 437.5) * ((100vw - 1200px) / (1920 - 1200)));
     border-top: none;
     border-left: none;
     border-right: none;
     border-bottom-color: #004D61;
-    font-size: 40px;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     text-transform: uppercase;
 }
 
@@ -139,22 +62,22 @@ body{
 
 
 #warning{
-    width: 1000px;
+    width: calc(625px + (1000 - 625) * ((100vw - 1200px) / (1920 - 1200)));
     margin: auto;
-    height: 50px;
+    height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #004D61;
     color: #ffffff;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-bottom: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .blocks, #error{
     margin: 0 auto;
-    margin-bottom: 100px;
-    width: 1000px;
+    margin-bottom: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(625px + (1000 - 625) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #ffffff;
     color: #004D61;
-    border-radius: 15px;
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
     display: flex;
     flex-direction: column;
 }
@@ -165,13 +88,13 @@ body{
 }
 
 #errNick, #errClass, #errRol{
-    margin: 10px 35px;
+    margin: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200))) calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .textInBox{
-    padding: 20px 0px 0px 30px;
+    padding: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200))) 0px 0px calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
     margin: 0;
-    font-size: 40px;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     text-transform: uppercase;
 }
 
@@ -180,41 +103,41 @@ body{
 }
 
 #NicknameBlock{
-    height: 200px;
+    height: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #ClassBlock{
-    height: 1110px;
+    height: calc(693.75px + (1110 - 693.75) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #RaidRoleBlock{
-    height: 440px;
+    height: calc(275px + (440 - 275) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #InfoBlock{
-    height: 200px;
+    height: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .dots{
-    margin-left: 35px;
+    margin-left: calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
     transform: scale(2);
 }
 
 .Choises{
-    font-size: 40px;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     text-transform: uppercase;
-    margin-left: 20px;
+    margin-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
     color: #004D61; 
 }
 
 #damager{
-    margin-top: 50px;
+    margin-top: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .ForDots{
     flex-direction: row;
-    margin-bottom: 33px;
-    margin-left: 25px;
+    margin-bottom: calc(20.625px + (33 - 20.625) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
     display: flex;
     align-items: center;
     align-content: center;
@@ -222,32 +145,35 @@ body{
 
 .WarningText{
     margin: 0px;
-    font-size: 50px;
+    font-size: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #WarriorDot{
-    margin-top: 30px;
+    margin-top: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #DamagerDot{
-    margin-top: 30px;
+    margin-top: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .WowIcons{
+    width: calc(38.75px + (62 - 38.75) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(38.75px + (62 - 38.75) * ((100vw - 1200px) / (1920 - 1200)));
     opacity: 0.60;
+    transform: scale(1);
 }
 
 #submitButton{
-    width: 1000px;
-    height: 80px;
+    width: calc(625px + (1000 - 625) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #FF502F;
-    border-radius: 15px;
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
     border: none;
     margin: 0 auto;
-    font-size: 40px;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
     text-transform: uppercase;
     color: #ffffff;
-    letter-spacing: 6px;
+    letter-spacing: calc(3.75px + (6 - 3.75) * ((100vw - 1200px) / (1920 - 1200)));
     position: relative;
     -webkit-transition-duration: 2s;
     transition-duration: 2s;
@@ -275,7 +201,7 @@ body{
     flex-direction: row; 
     justify-content: center;
     align-content: center;
-    border-radius: 15px;
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .success {
@@ -283,7 +209,7 @@ body{
     height: 100%;
     margin: 0 auto; 
     font-size: calc(30px + (48 - 30) * ((100vw - 1200px) / (1920 - 1200)));
-    margin: 10px 35px 0;
+    margin: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200))) calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200))) 0;
     color: rgba(255, 80, 47, 0.5); 
 }
 

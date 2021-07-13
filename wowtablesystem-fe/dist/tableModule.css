@@ -17,181 +17,181 @@ body{
     font-family: Bebas Neue;
     font-style: normal;
     font-weight: normal;
-    font-size: 40px;
-    line-height: 50px;
+    font-size: calc(25px + (40 - 25) * ((100vw - 1200px) / (1920 - 1200)));
+    line-height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #004D61;
-    width: 1700px;
+    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
     box-sizing: border-box;
 }
 
 /* header */
 
 .container{
-    width: 1700px;
-    height: 510px;
+    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(318.75px + (510 - 318.75) * ((100vw - 1200px) / (1920 - 1200)));
     background: #FFF;
-    border-radius: 15px;
-    margin-top: 200px;
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(125px + (200 - 125) * ((100vw - 1200px) / (1920 - 1200)));
     margin: 0 auto;
 }
 
 .one{
     background: #FF502F; 
-    width: 400px;
-    height: 25px;
-    border-radius: 15px 0px 0px 0px;
+    width: calc(250px + (400 - 250) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200))) 0px 0px 0px;
 }
 
 .two{
     background: #FF502F;
     float: left;
-    margin-top: 160px;
-    width: 25px;
-    height: 325px;
-    border-radius: 0px 0px 0px 15px;
+    margin-top: calc(100px + (160 - 100) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(203.125px + (325 - 203.125) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: 0px 0px 0px calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .three{
     background: #FF502F;
     float: right;
-    width: 400px;
-    height: 25px;
-    border-radius: 0px 0px 15px 0px;
+    width: calc(250px + (400 - 250) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: 0px 0px calc(9.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200))) 0px;
 }
 
 .block{
     float: right;
-    width: 1650px;
-    height: 460px;
+    width: calc(1031.25px + (1650 - 1031.25) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(287.5px + (460 - 287.5) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .logo{
     background-image: url(img/logoTable.jpg);
-    margin-top: 15px;
+    margin-top: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
     float: left;
-    width: 460px;
-    height: 460px;
-    border-radius: 350px;
+    width: calc(287.5px + (460 - 287.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(287.5px + (460 - 287.5) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(218.75px + (350 - 218.75) * ((100vw - 1200px) / (1920 - 1200)));
     position: absolute;
 }
 
 .name{
     float: right;
     background: #004D61;
-    width: 1500px;
-    height: 370px;
+    width: calc(937.5px + (1500 - 937.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(231.25px + (370 - 231.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .headerTopBlock{
-    height: 90px;
-    width: 1500px;
+    height: calc(56.25px + (90 - 56.25) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(937.5px + (1500 - 937.5) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #ffffff;
 }
 
 .headerTopText{
-    margin: 0px 500px;
-    font: 55px Bebas;
+    margin: 0px calc(312.5px + (500 - 312.5) * ((100vw - 1200px) / (1920 - 1200)));
+    font: calc(34.375px + (55 - 34.375) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
     text-transform: uppercase;
     color: #FF502F;
-    letter-spacing: 10px;
+    letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .text{
     color: #FF502F;
-    font: 80px BebasBold;
-    height: 180px;
-    width: 900px;
-    margin-left: 500px;
-    margin-top: 50px;
+    font: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200))) BebasBold;
+    height: calc(112.5px + (180 - 112.5) * ((100vw - 1200px) / (1920 - 1200)));
+    width: calc(562.5px + (900 - 562.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(312.5px + (500 - 312.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
 
 }
 
 #textLogo{
-    letter-spacing: 10px;
+    letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .clock{
-    height: 50px;
+    height: calc(31.25px + (50 - 31.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .time{
     color: #FF502F;
-    font: 55px Bebas;
-    letter-spacing: 8px;
-    margin-left: 500px;
-    margin-top: 75px;
+    font: calc(34.375px + (55 - 34.375) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
+    letter-spacing: calc(5px + (8 - 5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(312.5px + (500 - 312.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(46.875px + (75 - 46.875) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .choiseBlocks{
-    width: 1700px;
-    height: 250px;
+    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(156.25px + (250 - 156.25) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .menuBlocks{
-    width: 600px;
-    height: 150px;
+    width: calc(375px + (600 - 375) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(93.75px + (150 - 93.75) * ((100vw - 1200px) / (1920 - 1200)));
     background-color: #ffffff;
-    margin-top: 100px;
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
     float: left;
-    border-radius: 15px;
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #roleBlock{
-    width: 300px;
-    height: 150px;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: calc(187.5px + (300 - 187.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(93.75px + (150 - 93.75) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-right: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .choiseMenu{
     background-color: rgba(132, 132, 132, 0.3);
-    width: 540px;
-    height: 80px;
-    border-radius: 15px;
-    margin-top: 35px;
-    margin-left: 30px;
+    width: calc(337.5px + (540 - 337.5) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(21.875px + (35 - 21.875) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(18.75px + (3 - 18.75) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #choiseInRoleMenu{
-    width: 250px;
-    margin-left: 25px;
+    width: calc(156.25px + (250 - 156.25) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-left: calc(15.625px + (25 - 15.625) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #textInChoiseMenu{
     color: #848484;
-    padding-left: 20px;
-    font: 70px Bebas;
+    padding-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
+    font: calc(43.75px + (70 - 43.75) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
     margin: 0px;
     text-transform: uppercase;
-    letter-spacing: 10px;
-    height: 80px;
+    letter-spacing: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
+    height: calc(50px + (80 - 50) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #textInChoiseMenu:hover{
     background-color: rgba(255, 80, 47, 0.3);
-    border-radius: 15px;
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
     color: #FF502F;
 }
 
 
 .insideConteinerDiv{
-    padding: 10px;
+    padding: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
     box-sizing: border-box;
     background-color: #ffffff;
-    width: 1700px;
-    margin-top: 100px;
-    border-radius: 15px;
-    margin-bottom: 300px;
+    width: calc(1062.5px + (1700 - 1062.5) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-top: calc(62.5px + (100 - 62.5) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
+    margin-bottom: calc(187.5px + (300 - 187.5) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .mainTable{
-    width: 1680px;
-    border-radius: 15px;
+    width: calc(1050px + (1680 - 1050) * ((100vw - 1200px) / (1920 - 1200)));
+    border-radius: calc(39.375px + (15 - 9.375) * ((100vw - 1200px) / (1920 - 1200)));
     border: none;
     border-collapse: collapse;
-    font: 30px Bebas;
+    font: calc(18.75px + (30 - 18.75) * ((100vw - 1200px) / (1920 - 1200))) Bebas;
 }
 
 .imgContent {
@@ -202,7 +202,7 @@ body{
 
 .textInTable {
     margin: 0 0;
-    padding-left: 10px;
+    padding-left: calc(6.25px + (10 - 6.25) * ((100vw - 1200px) / (1920 - 1200)));
     color: #004D61;
     letter-spacing: 0.15em;
 }
@@ -214,7 +214,7 @@ body{
 .tableLines{
     border: 2px solid #FF502F;
     border-top: none;
-    padding-left: 20px;
+    padding-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 .lastTableLines{
@@ -222,7 +222,7 @@ body{
     border-top: none;
     padding: 0px;
     border-bottom: none;
-    padding-left: 20px;
+    padding-left: calc(12.5px + (20 - 12.5) * ((100vw - 1200px) / (1920 - 1200)));
 }
 
 #numberLine{
@@ -230,17 +230,17 @@ body{
     border-left: none;
     border-right: 3px solid #FF502F;
     box-sizing: border-box;
-    width: 60px;
+    width: calc(37.5px + (60 - 37.5) * ((100vw - 1200px) / (1920 - 1200)));
     padding-left: 0px;
 }
 
 #firstLineBlock{
     border-left: none;
     border-right: 3px solid #FF502F;
-    width: 60px;
+    width: calc(37.5px + (60 - 37.5) * ((100vw - 1200px) / (1920 - 1200)));
     color: #FF502F;
     font-family: BebasBold;
-    padding-left: 17px;
+    padding-left: calc(10.625px + (17 - 10.625) * ((100vw - 1200px) / (1920 - 1200)));
     box-sizing: border-box;
 }
 
@@ -252,7 +252,7 @@ body{
     border-left: none;
     border-bottom: none;
     border-right: 3px solid #FF502F;
-    padding-left: 17px;
+    padding-left: calc(10.625px + (17 - 10.625) * ((100vw - 1200px) / (1920 - 1200)));
     color: #FF502F;
     font-family: BebasBold;
 }
